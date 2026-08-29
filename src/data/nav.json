@@ -1,6 +1,6 @@
 {
   "primary": [
-    { "label": "Work", "url": "/work" },
+    { "label": "Projects", "url": "/work" },
     {
       "label": "Services",
       "url": "/services",
@@ -21,7 +21,7 @@
     {
       "title": "Explore",
       "links": [
-        { "label": "Work", "url": "/work" },
+        { "label": "Projects", "url": "/work" },
         { "label": "Services", "url": "/services" },
         { "label": "Studio", "url": "/studio" },
         { "label": "Journal", "url": "/journal" },

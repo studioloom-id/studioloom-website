@@ -267,6 +267,23 @@ section { padding: var(--pad-v) var(--pad-h); }
 }
 .pg-item:hover .pg-caption { opacity: 1; }
 
+/* ============ PROJECT CATEGORY ROWS (work page — one row of 3 per project) ============ */
+.project-category { padding: var(--pad-v) var(--pad-h); border-top: 1px solid rgba(33,26,20,0.08); }
+.project-category:first-child { border-top: none; }
+.project-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+.project-row-img { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
+.project-row-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.project-row-img:hover img { transform: scale(1.04); }
+.project-name {
+  display: inline-block; margin-top: 1.4rem; font-family: var(--font-display); font-weight: 400;
+  font-size: 1.15rem; color: var(--umber); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;
+}
+.project-name:hover { border-color: var(--terracotta); color: var(--terracotta); }
+.project-coming-soon {
+  margin-top: 2rem; padding: 3.5rem; border: 1px dashed rgba(33,26,20,0.18); text-align: center;
+}
+.project-coming-soon p { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 1.1rem; color: var(--greige); }
+
 /* ============ PROCESS ============ */
 .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 4rem; border-top: 1px solid rgba(250,247,242,0.1); }
 .process-step { padding: 3rem 2rem 2.5rem; border-right: 1px solid rgba(250,247,242,0.1); }
@@ -333,6 +350,13 @@ section { padding: var(--pad-v) var(--pad-h); }
 .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--terracotta); flex-shrink: 0; }
 .faq-item[open] summary::after { content: '−'; }
 .faq-answer { padding: 0 0 1.6rem; font-family: var(--font-body); font-weight: 300; font-size: 0.88rem; line-height: 1.8; color: var(--espresso); max-width: 640px; }
+
+/* Compact split variant — FAQ paired with an image, shorter than the full-width version */
+.split-section.faq-split .split-img { min-height: 460px; }
+.split-section.faq-split .split-text { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.faq-split .faq-list { margin-top: 1.2rem; max-width: 100%; }
+.faq-split .faq-item summary { padding: 1.15rem 0; font-size: 1.02rem; }
+.faq-split .faq-answer { padding: 0 0 1.15rem; font-size: 0.85rem; }
 
 /* ============ CONTACT / FORM ============ */
 .contact-methods { display: flex; flex-direction: column; margin-top: 3rem; border-top: 1px solid rgba(33,26,20,0.1); }
@@ -464,4 +488,6 @@ footer { background: var(--umber); padding-top: 4rem; border-top: 1px solid rgba
   .pg-item.wide { grid-column: span 1; }
   .footer-cols { gap: 2rem; }
   .gallery-track img { width: 78vw; height: 260px; }
+  .project-row { grid-template-columns: 1fr; gap: 0.8rem; }
+  .project-coming-soon { padding: 2.5rem 1.5rem; }
 }

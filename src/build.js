@@ -90,10 +90,6 @@ function renderFooter() {
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">&copy; ${nap.copyrightYear} Studio Loom</span>
-    <div class="footer-social">
-      <a href="${nap.social.instagram}" rel="me noopener" target="_blank">Instagram</a>
-      <a href="${nap.social.linkedin}" rel="me noopener" target="_blank">LinkedIn</a>
-    </div>
   </div>
 </footer>`;
 }
@@ -189,16 +185,18 @@ function renderSchemaTag(obj) {
 }
 
 // ---------- FAQ visible markup ----------
-function renderFaqSection(faq) {
+function renderFaqSection(faq, image) {
   const items = faq
     .map(
-      (f, i) => `      <details class="faq-item"${i === 0 ? ' open' : ''}>
-        <summary>${esc(f.q)}</summary>
-        <p class="faq-answer">${esc(f.a)}</p>
-      </details>`
+      (f, i) => `        <details class="faq-item"${i === 0 ? ' open' : ''}>
+          <summary>${esc(f.q)}</summary>
+          <p class="faq-answer">${esc(f.a)}</p>
+        </details>`
     )
     .join('\n');
-  return `
+
+  if (!image) {
+    return `
 <section class="faq-section">
   <div class="fade-up">
     <span class="section-label">Common Questions</span>
@@ -207,6 +205,19 @@ function renderFaqSection(faq) {
 ${items}
     </div>
   </div>
+</section>`;
+  }
+
+  return `
+<section class="split-section faq-split fade-up">
+  <div class="split-text">
+    <span class="section-label">Common Questions</span>
+    <h2 class="section-title">Frequently asked.</h2>
+    <div class="faq-list">
+${items}
+    </div>
+  </div>
+  <img class="split-img" src="${image.src}" alt="${esc(image.alt)}" width="1440" height="960" loading="lazy">
 </section>`;
 }
 
@@ -234,7 +245,7 @@ function buildPage(meta, body) {
   if (meta.schema?.faq) schemaBlocks.push(faqSchema(meta.schema.faq));
 
   let fullBody = body;
-  if (meta.schema?.faq) fullBody += renderFaqSection(meta.schema.faq);
+  if (meta.schema?.faq) fullBody += renderFaqSection(meta.schema.faq, meta.faqImage);
 
   const ogImage = meta.ogImage ? `${SITE_URL}${meta.ogImage}` : `${SITE_URL}/assets/images/og/default-og.jpg`;
   const preload = meta.preloadImage
