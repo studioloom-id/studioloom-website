@@ -279,10 +279,6 @@ section { padding: var(--pad-v) var(--pad-h); }
   font-size: 1.15rem; color: var(--umber); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;
 }
 .project-name:hover { border-color: var(--terracotta); color: var(--terracotta); }
-.project-coming-soon {
-  margin-top: 2rem; padding: 3.5rem; border: 1px dashed rgba(33,26,20,0.18); text-align: center;
-}
-.project-coming-soon p { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 1.1rem; color: var(--greige); }
 
 /* ============ PROCESS ============ */
 .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 4rem; border-top: 1px solid rgba(250,247,242,0.1); }
@@ -489,5 +485,4 @@ footer { background: var(--umber); padding-top: 4rem; border-top: 1px solid rgba
   .footer-cols { gap: 2rem; }
   .gallery-track img { width: 78vw; height: 260px; }
   .project-row { grid-template-columns: 1fr; gap: 0.8rem; }
-  .project-coming-soon { padding: 2.5rem 1.5rem; }
 }
