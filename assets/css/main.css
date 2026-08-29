@@ -184,6 +184,16 @@ img { max-width: 100%; }
 .btn-ghost:hover { color: var(--bone); }
 .btn-ghost.on-dark-bg { color: var(--umber); }
 .btn-ghost.on-dark-bg:hover { color: var(--terracotta); }
+.btn-outline {
+  font-family: var(--font-body); font-weight: 400; font-size: 0.68rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--umber);
+  background: transparent; border: 1px solid rgba(33,26,20,0.35);
+  padding: 1rem 2.2rem; text-decoration: none; display: inline-block;
+  transition: all 0.25s; cursor: pointer;
+}
+.btn-outline:hover { background: var(--umber); color: var(--bone); border-color: var(--umber); }
+.btn-outline.on-dark { color: var(--bone); border-color: rgba(250,247,242,0.5); }
+.btn-outline.on-dark:hover { background: var(--bone); color: var(--umber); border-color: var(--bone); }
 
 /* ============ SECTIONS ============ */
 section { padding: var(--pad-v) var(--pad-h); }
