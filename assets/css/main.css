@@ -210,7 +210,8 @@ section { padding: var(--pad-v) var(--pad-h); }
   display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; padding: 0;
 }
 .split-section.dark { background: var(--umber); color: var(--bone); }
-.split-section .split-text { padding: var(--pad-v) var(--pad-h); }
+.split-section .split-text { padding: var(--pad-v) var(--pad-h); display: flex; flex-direction: column; justify-content: center; }
+.split-section .split-text .body-copy { font-size: 1.05rem; line-height: 1.85; max-width: 520px; }
 .split-section.dark .section-label { color: var(--terracotta); }
 .split-section.dark .section-title { color: var(--bone); }
 .split-img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 600px; }
@@ -276,8 +277,8 @@ section { padding: var(--pad-v) var(--pad-h); }
 /* ============ STATEMENT (full-bleed dark editorial section) ============ */
 .statement-section { background: var(--umber); color: var(--bone); text-align: center; padding: 6rem var(--pad-h); }
 .lead-copy {
-  font-family: var(--font-display); font-weight: 300; font-size: clamp(1.3rem, 2.3vw, 1.85rem);
-  line-height: 1.65; color: rgba(250,247,242,0.88); max-width: 780px; margin: 0 auto;
+  font-family: var(--font-display); font-weight: 300; font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  line-height: 1.7; color: rgba(250,247,242,0.88); max-width: 700px; margin: 0 auto;
 }
 .lead-copy + .lead-copy { margin-top: 1.6rem; }
 .lead-copy em { font-style: italic; color: var(--bone); }
