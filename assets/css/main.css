@@ -280,6 +280,44 @@ section { padding: var(--pad-v) var(--pad-h); }
 }
 .spec-list li::before { content: '—'; position: absolute; left: 0; color: var(--terracotta); }
 
+/* ============ SPEC CARDS (numbered tile grid — replaces spec-list on service pages) ============ */
+.spec-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1px;
+  background: rgba(33,26,20,0.12);
+  margin-top: 2rem;
+  max-width: 980px;
+  border: 1px solid rgba(33,26,20,0.12);
+}
+.spec-card { background: var(--bone); padding: 2.2rem 1.8rem; }
+.spec-card-num {
+  display: block; font-family: var(--font-display); font-size: 0.72rem;
+  letter-spacing: 0.25em; color: var(--terracotta); margin-bottom: 1rem;
+}
+.spec-card-desc {
+  font-family: var(--font-body); font-weight: 300; font-size: 0.85rem;
+  line-height: 1.75; color: var(--espresso);
+}
+
+/* ============ QUICK FACTS (at-a-glance strip) ============ */
+.quick-facts {
+  display: flex; flex-wrap: wrap;
+  border-top: 1px solid rgba(33,26,20,0.12);
+  border-bottom: 1px solid rgba(33,26,20,0.12);
+  margin-top: 2.5rem; max-width: 980px;
+}
+.quick-fact { flex: 1 1 220px; padding: 1.5rem 2rem 1.5rem 0; border-right: 1px solid rgba(33,26,20,0.12); }
+.quick-fact:last-child { border-right: none; }
+.quick-fact-label {
+  display: block; font-family: var(--font-body); font-size: 0.6rem;
+  letter-spacing: 0.28em; text-transform: uppercase; color: var(--greige); margin-bottom: 0.5rem;
+}
+.quick-fact-value {
+  font-family: var(--font-display); font-weight: 400; font-size: 1.05rem;
+  color: var(--umber); line-height: 1.3;
+}
+
 /* ============ FAQ ACCORDION ============ */
 .faq-list { max-width: 760px; margin-top: 1.5rem; border-top: 1px solid rgba(33,26,20,0.12); }
 .faq-item { border-bottom: 1px solid rgba(33,26,20,0.12); }
@@ -418,4 +456,6 @@ footer { background: var(--umber); padding-top: 4rem; border-top: 1px solid rgba
   .portfolio-grid { grid-template-columns: 1fr; }
   .pg-item.wide { grid-column: span 1; }
   .footer-cols { gap: 2rem; }
+  .quick-fact { flex-basis: 100%; border-right: none; border-bottom: 1px solid rgba(33,26,20,0.12); padding: 1.2rem 0; }
+  .quick-fact:last-child { border-bottom: none; }
 }
