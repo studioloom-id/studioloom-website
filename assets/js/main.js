@@ -29,4 +29,14 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
+
+  document.querySelectorAll('.gallery-carousel').forEach((carousel) => {
+    const track = carousel.querySelector('.gallery-track');
+    const prev = carousel.querySelector('.gallery-prev');
+    const next = carousel.querySelector('.gallery-next');
+    if (!track) return;
+    const step = () => (track.querySelector('img')?.offsetWidth || 300) + 16;
+    prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  });
 })();

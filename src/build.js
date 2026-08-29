@@ -70,8 +70,13 @@ function renderFooter() {
   return `<footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <span class="footer-logo-studio">Studio</span>
-      <span class="footer-logo-loom">Loom</span>
+      <div class="footer-logo-row">
+        <img class="nav-logo-mark" src="/assets/images/brand/studio-loom-mark.png" width="32" height="32" alt="Studio Loom mark">
+        <div class="nav-logo-text">
+          <span class="footer-logo-studio">Studio</span>
+          <span class="footer-logo-loom">Loom</span>
+        </div>
+      </div>
       <p class="footer-tagline">${esc(nap.tagline)}</p>
       <div class="footer-nap">
         ${esc(nap.address.display)}<br>
