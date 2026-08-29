@@ -1,0 +1,10 @@
+node_modules
+_originals
+src
+scripts
+package.json
+package-lock.json
+.gitignore
+README.md
+CNAME
+.claude

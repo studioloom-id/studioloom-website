@@ -1,0 +1,101 @@
+<!--json
+{
+  "url": "/contact",
+  "title": "Contact Studio Loom | Interior Designer Gurugram",
+  "description": "Get in touch with Studio Loom to discuss your interior design project in Gurugram or Delhi NCR. Book a design consultation or send your brief.",
+  "ogType": "website",
+  "ogImage": "/assets/images/solanki-residence/solanki-residence-bedroom-quiet-luxury-gurugram-02-og.jpg",
+  "breadcrumb": [
+    { "name": "Home", "url": "/" },
+    { "name": "Contact", "url": "/contact" }
+  ],
+  "schema": {
+    "custom": [
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Studio Loom",
+        "url": "https://studioloom.co.in/contact"
+      }
+    ]
+  },
+  "extraScripts": "<script src=\"/assets/js/contact-form.js\" defer></script>"
+}
+-->
+<section class="split-section" id="contact">
+  <div class="split-text fade-up">
+    <nav class="breadcrumb on-light" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>Contact</span></nav>
+    <span class="section-label">Get in Touch</span>
+    <h1 class="section-title">Start a Project</h1>
+    <p class="body-copy" style="margin-top:1rem;">Studio Loom works with a select number of projects at any given time. Every project receives the full attention of the studio.</p>
+    <p class="body-copy">Every engagement begins with a design consultation — a structured session to understand your space, brief, and what the project requires. The consultation fee is credited toward your project investment when you proceed.</p>
+
+    <!-- TODO: replace this form action with the real Formspree/Web3Forms endpoint once the account is created -->
+    <form class="enquiry-form" id="enquiry-form" action="https://formspree.io/f/TODO_REPLACE_WITH_REAL_FORM_ID" method="POST">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="project_type">Project Type</label>
+        <select id="project_type" name="project_type" required>
+          <option value="">Select one</option>
+          <option value="Residential">Residential</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Hospitality">Hospitality</option>
+        </select>
+      </div>
+      <div>
+        <label for="service_type">Service Type</label>
+        <select id="service_type" name="service_type" required>
+          <option value="">Select one</option>
+          <option value="Turnkey">Turnkey Interior Design</option>
+          <option value="Consultation">Design Consultation</option>
+          <option value="Styling">Interior Styling</option>
+          <option value="Not sure">Not sure yet</option>
+        </select>
+      </div>
+      <div>
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="e.g. DLF Phase 5, Gurugram">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us about your space and brief"></textarea>
+      </div>
+      <button class="btn-primary" type="submit">Send enquiry</button>
+      <p class="form-status" id="form-status"></p>
+    </form>
+
+    <p class="body-copy" style="margin-top:2rem;">Not ready to book? Use our project cost calculator to get an indicative range for your project first.</p>
+    <a class="btn-ghost" href="/cost-calculator">Project cost calculator</a>
+    <p class="body-copy" style="margin-top:1rem;">Or book a 30-minute call directly via <a href="https://calendly.com/studioloom-id/30min" rel="noopener" target="_blank" style="color:var(--terracotta);">Calendly</a>.</p>
+
+    <div class="contact-methods">
+      <div class="contact-method">
+        <span class="contact-method-label">Studio</span>
+        <span class="contact-method-value" style="font-size:0.95rem;">23P UGF Sector 40, Near Mohyal Colony, Gurugram, Haryana 122003</span>
+      </div>
+      <div class="contact-method">
+        <span class="contact-method-label">Phone</span>
+        <a class="contact-method-value" href="tel:+918800110317">+91 8800 110 317</a>
+      </div>
+      <div class="contact-method">
+        <span class="contact-method-label">Email</span>
+        <a class="contact-method-value" href="mailto:projects@studioloom.co.in">projects@studioloom.co.in</a>
+      </div>
+    </div>
+    <p class="body-copy" style="margin-top:1.5rem;">Studio Loom is based in Gurugram (Gurgaon) and works across Delhi NCR.</p>
+  </div>
+  <img class="split-img" src="/assets/images/solanki-residence/solanki-residence-bedroom-quiet-luxury-gurugram-02-full.jpg"
+       alt="Bedroom with warm ambient lighting and layered textiles — Studio Loom, Gurugram"
+       width="1440" height="960" loading="lazy">
+</section>

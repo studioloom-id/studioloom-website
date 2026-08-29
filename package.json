@@ -1,0 +1,13 @@
+{
+  "name": "studioloom-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Studio Loom — studioloom.co.in. Static site, built with a local Node script (no runtime framework, no build step needed by GitHub Pages).",
+  "scripts": {
+    "build": "node src/build.js && node scripts/generate-sitemap.js",
+    "process-images": "node scripts/process-images.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

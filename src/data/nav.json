@@ -1,0 +1,50 @@
+{
+  "primary": [
+    { "label": "Work", "url": "/work" },
+    {
+      "label": "Services",
+      "url": "/services",
+      "children": [
+        { "label": "Turnkey Interior Design", "url": "/services/turnkey-interior-design" },
+        { "label": "Design Consultation", "url": "/services/design-consultation" },
+        { "label": "Interior Styling", "url": "/services/interior-styling" },
+        { "label": "Residential Interior Design", "url": "/services/residential-interior-design-gurugram" },
+        { "label": "Commercial Interior Design", "url": "/services/commercial-interior-design" },
+        { "label": "Hospitality Interior Design", "url": "/services/hospitality-interior-design" }
+      ]
+    },
+    { "label": "Studio", "url": "/studio" }
+  ],
+  "ctaLabel": "Get in Touch",
+  "ctaUrl": "/contact",
+  "footerSections": [
+    {
+      "title": "Explore",
+      "links": [
+        { "label": "Work", "url": "/work" },
+        { "label": "Services", "url": "/services" },
+        { "label": "Studio", "url": "/studio" },
+        { "label": "Journal", "url": "/journal" },
+        { "label": "Contact", "url": "/contact" }
+      ]
+    },
+    {
+      "title": "Services",
+      "links": [
+        { "label": "Turnkey Interior Design", "url": "/services/turnkey-interior-design" },
+        { "label": "Design Consultation", "url": "/services/design-consultation" },
+        { "label": "Interior Styling", "url": "/services/interior-styling" },
+        { "label": "Residential Interior Design", "url": "/services/residential-interior-design-gurugram" },
+        { "label": "Commercial Interior Design", "url": "/services/commercial-interior-design" },
+        { "label": "Hospitality Interior Design", "url": "/services/hospitality-interior-design" }
+      ]
+    },
+    {
+      "title": "Tools",
+      "links": [
+        { "label": "Cost Calculator", "url": "/cost-calculator" },
+        { "label": "Privacy Policy", "url": "/privacy-policy" }
+      ]
+    }
+  ]
+}

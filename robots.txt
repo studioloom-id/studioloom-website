@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /staging/
+Disallow: /*.json$
+
+Sitemap: https://studioloom.co.in/sitemap.xml
