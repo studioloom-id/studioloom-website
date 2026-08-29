@@ -214,7 +214,7 @@ section { padding: var(--pad-v) var(--pad-h); }
 .split-section .split-text .body-copy { font-size: 1.05rem; line-height: 1.85; max-width: 520px; }
 .split-section.dark .section-label { color: var(--terracotta); }
 .split-section.dark .section-title { color: var(--bone); }
-.split-img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 480px; }
+.split-img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 600px; }
 .split-section.reverse { direction: rtl; }
 .split-section.reverse > * { direction: ltr; }
 
