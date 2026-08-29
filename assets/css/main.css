@@ -185,13 +185,6 @@ img { max-width: 100%; }
 .btn-ghost.on-dark-bg { color: var(--umber); }
 .btn-ghost.on-dark-bg:hover { color: var(--terracotta); }
 
-/* ============ MARQUEE ============ */
-.marquee-strip { background: var(--umber); padding: 1.1rem 0; overflow: hidden; white-space: nowrap; }
-.marquee-inner { display: inline-flex; animation: marquee 32s linear infinite; }
-.marquee-item { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--sand); letter-spacing: 0.05em; padding: 0 2rem; }
-.marquee-dot { color: var(--terracotta); }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
 /* ============ SECTIONS ============ */
 section { padding: var(--pad-v) var(--pad-h); }
 .section-label {
