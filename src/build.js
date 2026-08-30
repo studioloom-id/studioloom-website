@@ -217,7 +217,9 @@ ${items}
 ${items}
     </div>
   </div>
-  <img class="split-img" src="${image.src}" alt="${esc(image.alt)}" width="1440" height="960" loading="lazy">
+  <div class="split-img-inset">
+    <img src="${image.src}" alt="${esc(image.alt)}" width="1440" height="960" loading="lazy">
+  </div>
 </section>`;
 }
 
