@@ -152,6 +152,7 @@ img { max-width: 100%; }
 }
 .page-hero .hero-content { padding: 0 var(--pad-h) 4rem; }
 .page-hero .hero-headline { font-size: clamp(2.4rem, 4.4vw, 4.2rem); }
+.page-hero .hero-headline em { font-size: 0.5em; }
 
 /* Breadcrumb */
 .breadcrumb {
