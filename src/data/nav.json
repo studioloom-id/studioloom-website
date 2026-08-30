@@ -13,7 +13,8 @@
         { "label": "Hospitality Interior Design", "url": "/services/hospitality-interior-design" }
       ]
     },
-    { "label": "Studio", "url": "/studio" }
+    { "label": "Studio", "url": "/studio" },
+    { "label": "Journal", "url": "/journal" }
   ],
   "ctaLabel": "Get in Touch",
   "ctaUrl": "/contact",
