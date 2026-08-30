@@ -5,6 +5,7 @@
   "description": "Selected interior design projects by Studio Loom — contemporary Indian homes and workspaces in Gurugram and across Delhi NCR.",
   "ogType": "website",
   "ogImage": "/assets/images/solanki-residence/solanki-residence-living-room-contemporary-indian-gurugram-01-og.jpg",
+  "preloadImage": "/assets/images/solanki-residence/solanki-residence-dining-space-warm-neutrals-gurugram-01-service-hero.webp",
   "breadcrumb": [
     { "name": "Home", "url": "/" },
     { "name": "Projects", "url": "/work" }
@@ -21,7 +22,16 @@
   }
 }
 -->
-<section class="page-hero" style="min-height:34vh;background:var(--umber);align-items:center;">
+<section class="page-hero" style="min-height:34vh;align-items:center;">
+  <div class="hero-bg">
+    <picture>
+      <source srcset="/assets/images/solanki-residence/solanki-residence-dining-space-warm-neutrals-gurugram-01-service-hero.webp" type="image/webp">
+      <img src="/assets/images/solanki-residence/solanki-residence-dining-space-warm-neutrals-gurugram-01-service-hero.jpg"
+           alt="Dining space with cane-back chairs, brass pendant, and hand-knotted rug — Studio Loom, Gurugram"
+           width="1440" height="810" loading="eager">
+    </picture>
+  </div>
+  <div class="hero-overlay"></div>
   <div class="hero-content fade-up" style="padding-top:8rem;">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>Projects</span></nav>
     <h1 class="hero-headline" style="color:var(--bone);">Selected Projects<br><em>Residential · Commercial · Hospitality</em></h1>

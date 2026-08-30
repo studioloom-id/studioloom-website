@@ -5,6 +5,7 @@
   "description": "Get a free interior design cost estimate for your Gurugram home. Input property type, BHK size, scope, and finish level to see an indicative range.",
   "ogType": "website",
   "ogImage": "/assets/images/og/default-og.jpg",
+  "preloadImage": "/assets/images/solanki-residence/solanki-residence-living-room-contemporary-indian-gurugram-02-service-hero.webp",
   "faqImage": { "src": "/assets/images/solanki-residence/solanki-residence-lounge-contemporary-indian-gurugram-01-full.jpg", "alt": "Lounge space with cane furniture and layered natural textures — Studio Loom, Gurugram" },
   "breadcrumb": [
     { "name": "Home", "url": "/" },
@@ -32,7 +33,16 @@
   "extraScripts": "<script src=\"/assets/js/cost-calculator.js\" defer></script>"
 }
 -->
-<section class="page-hero" style="min-height:34vh;background:var(--umber);align-items:center;">
+<section class="page-hero" style="min-height:34vh;align-items:center;">
+  <div class="hero-bg">
+    <picture>
+      <source srcset="/assets/images/solanki-residence/solanki-residence-living-room-contemporary-indian-gurugram-02-service-hero.webp" type="image/webp">
+      <img src="/assets/images/solanki-residence/solanki-residence-living-room-contemporary-indian-gurugram-02-service-hero.jpg"
+           alt="Living room with terracotta accents and natural light — Studio Loom, Gurugram"
+           width="1440" height="810" loading="eager">
+    </picture>
+  </div>
+  <div class="hero-overlay"></div>
   <div class="hero-content fade-up" style="padding-top:8rem;">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>Cost Calculator</span></nav>
     <h1 class="hero-headline" style="color:var(--bone);font-size:clamp(2.2rem,4vw,3.6rem);">Interior Design Cost in Gurugram:<br><em>Estimate Your Project</em></h1>
