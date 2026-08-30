@@ -26,7 +26,8 @@
         { "label": "Services", "url": "/services" },
         { "label": "Studio", "url": "/studio" },
         { "label": "Journal", "url": "/journal" },
-        { "label": "Contact", "url": "/contact" }
+        { "label": "Contact", "url": "/contact" },
+        { "label": "Privacy Policy", "url": "/privacy-policy" }
       ]
     },
     {
@@ -38,13 +39,6 @@
         { "label": "Residential Interior Design", "url": "/services/residential-interior-design-gurugram" },
         { "label": "Commercial Interior Design", "url": "/services/commercial-interior-design" },
         { "label": "Hospitality Interior Design", "url": "/services/hospitality-interior-design" }
-      ]
-    },
-    {
-      "title": "Tools",
-      "links": [
-        { "label": "Cost Calculator", "url": "/cost-calculator" },
-        { "label": "Privacy Policy", "url": "/privacy-policy" }
       ]
     }
   ]

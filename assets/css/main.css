@@ -383,25 +383,6 @@ span.project-name { color: var(--espresso); }
 .form-status.success { color: #4d7a4d; }
 .form-status.error { color: var(--terracotta); }
 
-/* ============ COST CALCULATOR ============ */
-.calculator-panel { background: var(--sand); padding: 2.5rem; margin-top: 2rem; max-width: 760px; }
-.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-bottom: 1.5rem; }
-.calc-field label { font-family: var(--font-body); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--espresso); display: block; margin-bottom: 0.5rem; }
-.calc-field select {
-  width: 100%; font-family: var(--font-body); font-size: 0.88rem; color: var(--umber);
-  background: var(--bone); border: 1px solid rgba(33,26,20,0.15); padding: 0.8rem; outline: none;
-}
-.calc-output { background: var(--umber); color: var(--bone); padding: 2rem; margin-top: 1rem; }
-.calc-output-range { font-family: var(--font-display); font-weight: 300; font-size: 2rem; color: var(--bone); margin-bottom: 0.5rem; }
-.calc-output-desc { font-family: var(--font-body); font-size: 0.85rem; color: rgba(250,247,242,0.7); line-height: 1.7; }
-.calc-disclaimer {
-  margin-top: 1.2rem; padding: 1rem 1.2rem; background: rgba(188,96,68,0.1); border-left: 3px solid var(--terracotta);
-  font-family: var(--font-body); font-size: 0.78rem; line-height: 1.6; color: var(--espresso);
-}
-.factor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-.factor-item h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.1rem; color: var(--umber); margin-bottom: 0.5rem; }
-.factor-item p { font-family: var(--font-body); font-size: 0.85rem; line-height: 1.7; color: var(--espresso); }
-
 /* ============ FOOTER ============ */
 footer { background: var(--umber); padding-top: 4rem; border-top: 1px solid rgba(250,247,242,0.08); }
 .footer-main { display: flex; justify-content: space-between; gap: 3rem; padding: 0 var(--pad-h) 3rem; flex-wrap: wrap; }
@@ -479,8 +460,6 @@ footer { background: var(--umber); padding-top: 4rem; border-top: 1px solid rgba
   .pg-item.wide { grid-column: span 2; }
   .footer-main { padding: 0 2rem 3rem; }
   .footer-bottom { padding: 1.6rem 2rem; }
-  .calc-grid { grid-template-columns: 1fr; }
-  .factor-grid { grid-template-columns: 1fr; }
   .statement-section { padding: 4rem 2rem; }
   .gallery-track { padding: 0 2rem; }
 }

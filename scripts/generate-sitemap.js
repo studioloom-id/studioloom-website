@@ -19,7 +19,7 @@ function walk(dir) {
 
 function priorityFor(url) {
   if (url === '/') return { priority: '1.0', changefreq: 'weekly' };
-  if (url.startsWith('/services/') || url === '/cost-calculator') return { priority: '0.9', changefreq: 'monthly' };
+  if (url.startsWith('/services/')) return { priority: '0.9', changefreq: 'monthly' };
   if (url === '/work') return { priority: '0.8', changefreq: 'monthly' };
   if (url === '/studio' || url === '/contact' || url === '/services') return { priority: '0.8', changefreq: 'monthly' };
   if (url.startsWith('/work/')) return { priority: '0.7', changefreq: 'yearly' };
