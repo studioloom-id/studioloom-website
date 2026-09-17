@@ -129,8 +129,8 @@ img { max-width: 100%; }
 .hero-content { position: relative; z-index: 2; width: 100%; padding: 0 var(--pad-h) 5rem; }
 .hero-tag {
   font-family: var(--font-body); font-size: 0.62rem; letter-spacing: 0.32em;
-  text-transform: uppercase; color: rgba(250,247,242,0.7); margin-bottom: 2rem;
-  display: block;
+  text-transform: uppercase; color: var(--bone); margin-bottom: 2rem;
+  display: block; text-shadow: 0 1px 4px rgba(0,0,0,0.45);
 }
 .hero-headline {
   font-family: var(--font-display); font-weight: 300;
