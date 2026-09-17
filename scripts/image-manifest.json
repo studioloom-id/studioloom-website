@@ -2,67 +2,73 @@
   {
     "source": "Solanki Living Room 01.png",
     "slug": "solanki-residence-living-room-contemporary-indian-gurugram-01",
-    "alt": "Contemporary Indian living room with warm sand walls and handwoven textiles — Studio Loom, Gurugram",
+    "alt": "Contemporary Indian living room with warm sand walls and handwoven textiles, Studio Loom, Gurugram",
     "gravity": "center"
   },
   {
     "source": "Living Room 02.png",
     "slug": "solanki-residence-living-room-contemporary-indian-gurugram-02",
-    "alt": "Living room with terracotta accents and natural light — Studio Loom, Gurugram",
+    "alt": "Living room with terracotta accents and natural light, Studio Loom, Gurugram",
     "gravity": "center"
   },
   {
     "source": "Solanki Dining Room 01.png",
     "slug": "solanki-residence-dining-space-warm-neutrals-gurugram-01",
-    "alt": "Dining space with cane-back chairs, brass pendant, and hand-knotted rug — Studio Loom, Gurugram",
+    "alt": "Dining space with cane-back chairs, brass pendant, and hand-knotted rug, Studio Loom, Gurugram",
     "gravity": "center"
   },
   {
     "source": "Solanki Bedroom 01.png",
     "slug": "solanki-residence-bedroom-quiet-luxury-gurugram-01",
-    "alt": "Quiet luxury bedroom with linen headboard and solid wood frame — Studio Loom, Gurugram",
+    "alt": "Quiet luxury bedroom with linen headboard and solid wood frame, Studio Loom, Gurugram",
     "gravity": "north"
   },
   {
     "source": "Solanki Bedroom 03.png",
     "slug": "solanki-residence-bedroom-quiet-luxury-gurugram-02",
-    "alt": "Bedroom with warm ambient lighting and layered textiles — Studio Loom, Gurugram",
+    "alt": "Bedroom with warm ambient lighting and layered textiles, Studio Loom, Gurugram",
     "gravity": "center"
   },
   {
     "source": "Bedroom 01.png",
     "slug": "solanki-residence-bedroom-quiet-luxury-gurugram-03",
-    "alt": "Bedroom with neutral palette and considered material detailing — Studio Loom, Gurugram",
+    "alt": "Bedroom with neutral palette and considered material detailing, Studio Loom, Gurugram",
     "gravity": "center"
   },
   {
     "source": "Bedroom 02_01.png",
     "slug": "solanki-residence-bedroom-quiet-luxury-gurugram-04",
-    "alt": "Bedroom corner with custom joinery and soft furnishings — Studio Loom, Gurugram",
+    "alt": "Bedroom corner with custom joinery and soft furnishings, Studio Loom, Gurugram",
     "gravity": "center"
   },
   {
     "source": "Bathroom 01.png",
     "slug": "solanki-residence-bathroom-contemporary-indian-gurugram-01",
-    "alt": "Contemporary bathroom with natural stone and warm brass fixtures — Studio Loom, Gurugram",
+    "alt": "Contemporary bathroom with natural stone and warm brass fixtures, Studio Loom, Gurugram",
     "gravity": "north"
   },
   {
     "source": "Dresser 01.png",
     "slug": "solanki-residence-dresser-detail-gurugram-01",
-    "alt": "Custom dresser detail with brass hardware and sheesham wood — Studio Loom, Gurugram",
+    "alt": "Custom dresser detail with brass hardware and sheesham wood, Studio Loom, Gurugram",
     "gravity": "north"
   },
   {
     "source": "Lounge 01.png",
     "slug": "solanki-residence-lounge-contemporary-indian-gurugram-01",
-    "alt": "Lounge space with cane furniture and layered natural textures — Studio Loom, Gurugram",
+    "alt": "Lounge space with cane furniture and layered natural textures, Studio Loom, Gurugram",
     "gravity": "center"
   },
   {
     "source": "Home Page Banner.png",
     "slug": "home-hero-living-room-wood-panel-gurugram-01",
-    "alt": "Living room with a wood coffered ceiling, blue armchair, and olive sofa — Studio Loom, Gurugram",
+    "alt": "Living room with a wood coffered ceiling, blue armchair, and olive sofa, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Home Page Banner 02.png",
+    "slug": "home-hero-living-room-dark-paneled-gurugram-02",
+    "alt": "Living room with dark wood paneling, a lit fireplace, and cream sofas, Studio Loom, Gurugram",
     "gravity": "center"
   }
 ]

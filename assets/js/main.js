@@ -30,6 +30,17 @@
     });
   }
 
+  document.querySelectorAll('.hero-slideshow').forEach((slideshow) => {
+    const slides = slideshow.querySelectorAll('.hero-slide');
+    if (slides.length < 2) return;
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 6000);
+  });
+
   document.querySelectorAll('.gallery-carousel').forEach((carousel) => {
     const track = carousel.querySelector('.gallery-track');
     const prev = carousel.querySelector('.gallery-prev');
