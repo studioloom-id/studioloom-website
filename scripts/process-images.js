@@ -8,6 +8,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 const ROOT = path.join(__dirname, '..');
+const SRC_DIR = path.join(ROOT, '_originals');
 const OUT_DIR = path.join(ROOT, 'assets', 'images', 'solanki-residence');
 const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'image-manifest.json'), 'utf8'));
 
@@ -41,7 +42,7 @@ async function main() {
   let totalFiles = 0;
 
   for (const entry of manifest) {
-    const srcPath = path.join(ROOT, entry.source);
+    const srcPath = path.join(SRC_DIR, entry.source);
     if (!fs.existsSync(srcPath)) {
       console.warn(`SKIP (source not found): ${entry.source}`);
       continue;
