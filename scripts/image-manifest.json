@@ -154,5 +154,11 @@
     "slug": "solanki-residence-primary-bedroom-seating-gurugram",
     "alt": "Primary bedroom with an upholstered bed, seating nook, and botanical artwork, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "Solanki Residence Entry.png",
+    "slug": "solanki-residence-entry-foyer-gurugram",
+    "alt": "Entry foyer with a round travertine table, brass chandelier, and framed botanical art, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]
