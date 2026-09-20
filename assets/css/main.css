@@ -330,14 +330,15 @@ span.project-name { color: var(--espresso); }
 .process-card-desc { font-family: var(--font-body); font-weight: 300; font-size: 0.85rem; line-height: 1.8; color: rgba(250,247,242,0.65); }
 
 /* ============ PROJECT GALLERY CAROUSEL ============ */
-.gallery-carousel { background: var(--umber); padding: var(--pad-v) 0; overflow: hidden; }
+.gallery-carousel { background: var(--umber); padding: 4rem 0; overflow: hidden; }
+.gallery-heading { text-align: center; margin-bottom: 2.5rem; }
 .gallery-track {
   display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory;
   padding: 0 var(--pad-h); scrollbar-width: none;
 }
 .gallery-track::-webkit-scrollbar { display: none; }
-.gallery-track img { scroll-snap-align: start; flex: 0 0 auto; width: min(32vw, 420px); height: 320px; object-fit: cover; }
-.gallery-controls { display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; }
+.gallery-track img { scroll-snap-align: start; flex: 0 0 auto; width: min(36vw, 480px); height: 380px; object-fit: cover; }
+.gallery-controls { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
 .gallery-btn {
   width: 46px; height: 46px; border-radius: 50%; background: var(--terracotta); color: var(--bone);
   border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
@@ -474,6 +475,6 @@ footer { background: var(--umber); padding-top: 4rem; border-top: 1px solid rgba
   .portfolio-grid { grid-template-columns: 1fr; }
   .pg-item.wide { grid-column: span 1; }
   .footer-cols { gap: 2rem; }
-  .gallery-track img { width: 78vw; height: 260px; }
+  .gallery-track img { width: 82vw; height: 300px; }
   .project-row { grid-template-columns: 1fr; gap: 0.8rem; }
 }
