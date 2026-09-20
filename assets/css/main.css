@@ -331,7 +331,7 @@ span.project-name { color: var(--espresso); }
 
 /* ============ PROJECT GALLERY CAROUSEL ============ */
 .gallery-carousel { background: var(--umber); padding: 4rem 0; overflow: hidden; }
-.gallery-heading { text-align: center; margin-bottom: 2.5rem; }
+.gallery-heading { text-align: left; padding: 0 var(--pad-h); margin-bottom: 2.5rem; }
 .gallery-track {
   display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory;
   padding: 0 var(--pad-h); scrollbar-width: none;
