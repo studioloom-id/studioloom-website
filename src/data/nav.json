@@ -7,10 +7,7 @@
       "children": [
         { "label": "Turnkey Interior Design", "url": "/services/turnkey-interior-design" },
         { "label": "Design Consultation", "url": "/services/design-consultation" },
-        { "label": "Interior Styling", "url": "/services/interior-styling" },
-        { "label": "Residential Interior Design", "url": "/services/residential-interior-design-gurugram" },
-        { "label": "Commercial Interior Design", "url": "/services/commercial-interior-design" },
-        { "label": "Hospitality Interior Design", "url": "/services/hospitality-interior-design" }
+        { "label": "Interior Styling", "url": "/services/interior-styling" }
       ]
     },
     { "label": "Studio", "url": "/studio" },
@@ -35,10 +32,7 @@
       "links": [
         { "label": "Turnkey Interior Design", "url": "/services/turnkey-interior-design" },
         { "label": "Design Consultation", "url": "/services/design-consultation" },
-        { "label": "Interior Styling", "url": "/services/interior-styling" },
-        { "label": "Residential Interior Design", "url": "/services/residential-interior-design-gurugram" },
-        { "label": "Commercial Interior Design", "url": "/services/commercial-interior-design" },
-        { "label": "Hospitality Interior Design", "url": "/services/hospitality-interior-design" }
+        { "label": "Interior Styling", "url": "/services/interior-styling" }
       ]
     }
   ]
