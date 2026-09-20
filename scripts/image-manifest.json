@@ -118,5 +118,17 @@
     "slug": "home-hero-bedroom-dark-headboard-gurugram-10",
     "alt": "Bedroom with a dark upholstered headboard, abstract art, and walk-in closet, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "Solanki Family Room.png",
+    "slug": "gallery-family-room-terracotta-sofa-gurugram-01",
+    "alt": "Family room with a terracotta velvet sofa, cream sectional, and framed artwork, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Solanki Living Room.png",
+    "slug": "gallery-living-room-rattan-chair-gurugram-02",
+    "alt": "Living room with a rattan lounge chair, marble coffee table, and sheer curtains, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]
