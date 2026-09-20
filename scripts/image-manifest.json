@@ -130,5 +130,29 @@
     "slug": "gallery-living-room-rattan-chair-gurugram-02",
     "alt": "Living room with a rattan lounge chair, marble coffee table, and sheer curtains, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "Solanki Dining Room.png",
+    "slug": "solanki-residence-dining-room-brass-pendant-gurugram-02",
+    "alt": "Dining room with a walnut table, brass pendant lights, and olive cabinetry, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Solanki Guest Bedroom.png",
+    "slug": "solanki-residence-guest-bedroom-blue-accents-gurugram",
+    "alt": "Guest bedroom with a channel-tufted headboard and indigo textile art, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Solanki Lounge.png",
+    "slug": "solanki-residence-lounge-fireplace-gurugram-02",
+    "alt": "Lounge with a built-in fireplace, brass chandelier, and olive velvet chairs, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Solanki Primary Bedroom.png",
+    "slug": "solanki-residence-primary-bedroom-seating-gurugram",
+    "alt": "Primary bedroom with an upholstered bed, seating nook, and botanical artwork, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]
