@@ -160,5 +160,11 @@
     "slug": "solanki-residence-entry-foyer-gurugram",
     "alt": "Entry foyer with a round travertine table, brass chandelier, and framed botanical art, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "Solanki Hallway.png",
+    "slug": "solanki-residence-hallway-lotus-art-gurugram",
+    "alt": "Hallway with olive-green walls, a walnut console, and framed lotus artwork, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]
