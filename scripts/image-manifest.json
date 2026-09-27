@@ -166,5 +166,11 @@
     "slug": "solanki-residence-hallway-lotus-art-gurugram",
     "alt": "Hallway with olive-green walls, a walnut console, and framed lotus artwork, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "Pahuja Bedroom 01.png",
+    "slug": "pahuja-residence-bedroom-gurugram-01",
+    "alt": "Bedroom with sage green paneling, a boucle upholstered bed, and block-print linens, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]
