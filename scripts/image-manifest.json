@@ -178,5 +178,29 @@
     "slug": "umber-office-reception-gurugram-01",
     "alt": "Reception lobby with a travertine console, sculptural pendant lights, and leather lounge chairs, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "The Umber Office 02.png",
+    "slug": "umber-office-private-cabin-gurugram-02",
+    "alt": "Private office cabin with a walnut desk, backlit shelving, and leather guest chairs, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "The Umber Office 03.png",
+    "slug": "umber-office-workstations-gurugram-03",
+    "alt": "Open-plan workstations beside a marble breakout table with pendant lighting, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "The Umber Office 04.png",
+    "slug": "umber-office-breakout-bar-gurugram-04",
+    "alt": "Workstations and a fluted-plinth breakout bar with woven barstools, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "The Umber Office 05.png",
+    "slug": "umber-office-boardroom-gurugram-05",
+    "alt": "Boardroom with a marble conference table, cane-back chairs, and layered pendant lighting, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]
