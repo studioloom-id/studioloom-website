@@ -208,5 +208,11 @@
     "slug": "travertine-office-cabin-gurugram-01",
     "alt": "Corner office cabin with floor-to-ceiling city views, a travertine desk, and glass partitions, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "The Workbench 01.png",
+    "slug": "workbench-studio-desks-gurugram-01",
+    "alt": "Creative studio with birch-ply desks, a whiteboard wall, and industrial pendant lighting, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]
