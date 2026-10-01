@@ -236,6 +236,21 @@ section { padding: var(--pad-v) var(--pad-h); }
 .split-section.reverse { direction: rtl; }
 .split-section.reverse > * { direction: ltr; }
 
+/* Gallery placeholder tile — used where a project's gallery has fewer real photos than slots */
+.gallery-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background: var(--sand);
+  color: var(--greige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* Philosophy grid */
 .about-philosophy { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3.5rem; }
 .philosophy-item { border-top: 1px solid rgba(250,247,242,0.12); padding-top: 1.5rem; }
