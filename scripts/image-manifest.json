@@ -214,5 +214,29 @@
     "slug": "workbench-studio-desks-gurugram-01",
     "alt": "Creative studio with birch-ply desks, a whiteboard wall, and industrial pendant lighting, Studio Loom, Gurugram",
     "gravity": "center"
+  },
+  {
+    "source": "Hardys Cafe 01.png",
+    "slug": "hardys-cafe-courtyard-gurugram-01",
+    "alt": "Candlelit courtyard dining with bamboo lighting, lanterns, and rattan chairs, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Hardys Cafe 02.png",
+    "slug": "hardys-cafe-archway-gurugram-02",
+    "alt": "Carved stone archway framing a candlelit courtyard dining area, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Hardys Cafe 03.png",
+    "slug": "hardys-cafe-table-detail-gurugram-03",
+    "alt": "Table detail with a wine glass, candle, and linen napkin in the courtyard, Studio Loom, Gurugram",
+    "gravity": "center"
+  },
+  {
+    "source": "Hardys Cafe 04.png",
+    "slug": "hardys-cafe-stone-bar-gurugram-04",
+    "alt": "Stone bar counter with lantern lighting and niche shelving, Studio Loom, Gurugram",
+    "gravity": "center"
   }
 ]

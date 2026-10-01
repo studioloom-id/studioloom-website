@@ -51,6 +51,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://studioloom.co.in/work/hardys-cafe</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://studioloom.co.in/work/solanki-residence</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
