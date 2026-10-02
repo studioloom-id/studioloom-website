@@ -204,8 +204,8 @@ img { max-width: 100%; }
 /* ============ SECTIONS ============ */
 section { padding: var(--pad-v) var(--pad-h); }
 .section-label {
-  font-family: var(--font-body); font-size: 0.62rem; letter-spacing: 0.35em;
-  text-transform: uppercase; color: var(--terracotta-text); margin-bottom: 1rem;
+  font-family: var(--font-body); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--terracotta-text); margin-bottom: 1.1rem;
   display: block;
 }
 .section-title {
