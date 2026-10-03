@@ -21,8 +21,10 @@
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preload" as="image" href="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.webp" type="image/webp">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.avif" imagesrcset="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero-sm.avif 1280w, /assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.avif 2560w" imagesizes="100vw" type="image/avif">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/main.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Studio Loom","url":"https://studioloom.co.in"}</script>
@@ -77,34 +79,43 @@
     <div class="hero-slideshow">
       <div class="hero-slide active">
         <picture>
-          <source srcset="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.webp" type="image/webp">
-          <img src="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.jpg"
+          <source srcset="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero-sm.avif 1280w, /assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.avif 2560w" sizes="100vw" type="image/avif">
+          <source srcset="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero-sm.webp 1280w, /assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.webp 2560w" sizes="100vw" type="image/webp">
+          <img srcset="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero-sm.jpg 1280w, /assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.jpg 2560w" sizes="100vw" src="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-hero.jpg"
                alt="Living room with a terracotta bench, olive armchairs, and abstract art, Studio Loom, Gurugram"
-               width="2560" height="1440" loading="eager">
+               width="2560" height="1440" loading="eager" fetchpriority="high">
         </picture>
       </div>
+      <!-- Slides below are deliberately NOT given real src/srcset: a <picture> sitting at
+           inset:0 is still geometrically "in viewport" even at opacity:0, so loading="lazy"
+           does not defer it — browsers fetch it immediately regardless. main.js swaps the
+           data-src/data-srcset in once the page has finished loading, well before each
+           slide is actually due to appear (slides rotate every 3s). -->
       <div class="hero-slide">
         <picture>
-          <source srcset="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero.webp" type="image/webp">
-          <img src="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero.jpg"
+          <source data-srcset="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero-sm.avif 1280w, /assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero.avif 2560w" sizes="100vw" type="image/avif">
+          <source data-srcset="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero-sm.webp 1280w, /assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero.webp 2560w" sizes="100vw" type="image/webp">
+          <img data-srcset="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero-sm.jpg 1280w, /assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero.jpg 2560w" sizes="100vw" data-src="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-hero.jpg"
                alt="Living room with striped wallpaper, cane-back sofas, and green velvet cushions, Studio Loom, Gurugram"
-               width="2560" height="1440" loading="lazy">
+               width="2560" height="1440">
         </picture>
       </div>
       <div class="hero-slide">
         <picture>
-          <source srcset="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero.webp" type="image/webp">
-          <img src="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero.jpg"
+          <source data-srcset="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero-sm.avif 1280w, /assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero.avif 2560w" sizes="100vw" type="image/avif">
+          <source data-srcset="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero-sm.webp 1280w, /assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero.webp 2560w" sizes="100vw" type="image/webp">
+          <img data-srcset="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero-sm.jpg 1280w, /assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero.jpg 2560w" sizes="100vw" data-src="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-hero.jpg"
                alt="Bedroom with a navy upholstered headboard, brass sconces, and warm wood tones, Studio Loom, Gurugram"
-               width="2560" height="1440" loading="lazy">
+               width="2560" height="1440">
         </picture>
       </div>
       <div class="hero-slide">
         <picture>
-          <source srcset="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero.webp" type="image/webp">
-          <img src="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero.jpg"
+          <source data-srcset="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero-sm.avif 1280w, /assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero.avif 2560w" sizes="100vw" type="image/avif">
+          <source data-srcset="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero-sm.webp 1280w, /assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero.webp 2560w" sizes="100vw" type="image/webp">
+          <img data-srcset="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero-sm.jpg 1280w, /assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero.jpg 2560w" sizes="100vw" data-src="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-hero.jpg"
                alt="Bedroom with a dark upholstered headboard, abstract art, and walk-in closet, Studio Loom, Gurugram"
-               width="2560" height="1440" loading="lazy">
+               width="2560" height="1440">
         </picture>
       </div>
     </div>
@@ -128,9 +139,13 @@
     <p class="body-copy" style="margin-top:1.2rem;">Architecture, furniture, lighting, materials, and user behaviour are considered as one interconnected system. We use rhythm, repetition, and material continuity to create spaces that are calm, understated, intelligent, and made to last.</p>
   </div>
   <div class="split-img-inset">
-    <img src="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full.jpg"
+        <picture>
+      <source srcset="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full-sm.avif 720w, /assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full.avif 1440w" sizes="(min-width: 1024px) 50vw, 100vw" type="image/avif">
+      <source srcset="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full-sm.webp 720w, /assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full.webp 1440w" sizes="(min-width: 1024px) 50vw, 100vw" type="image/webp">
+      <img srcset="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full-sm.jpg 720w, /assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full.jpg 1440w" sizes="(min-width: 1024px) 50vw, 100vw" src="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full.jpg"
          alt="Living room with exposed wood ceiling beams, a terracotta sofa, and gallery wall, Studio Loom, Gurugram"
          width="1440" height="960" loading="lazy">
+    </picture>
   </div>
 </section>
 
@@ -200,13 +215,13 @@
     <h2 class="section-title on-dark">Project Gallery</h2>
   </div>
   <div class="gallery-track">
-    <img src="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-full.jpg" alt="Living room with a terracotta bench, olive armchairs, and abstract art, Studio Loom, Gurugram" loading="lazy">
-    <img src="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-full.jpg" alt="Bedroom with a navy upholstered headboard, brass sconces, and warm wood tones, Studio Loom, Gurugram" loading="lazy">
-    <img src="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-full.jpg" alt="Living room with striped wallpaper, cane-back sofas, and green velvet cushions, Studio Loom, Gurugram" loading="lazy">
-    <img src="/assets/images/solanki-residence/gallery-family-room-terracotta-sofa-gurugram-01-full.jpg" alt="Family room with a terracotta velvet sofa, cream sectional, and framed artwork, Studio Loom, Gurugram" loading="lazy">
-    <img src="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-full.jpg" alt="Bedroom with a dark upholstered headboard, abstract art, and walk-in closet, Studio Loom, Gurugram" loading="lazy">
-    <img src="/assets/images/solanki-residence/gallery-living-room-rattan-chair-gurugram-02-full.jpg" alt="Living room with a rattan lounge chair, marble coffee table, and sheer curtains, Studio Loom, Gurugram" loading="lazy">
-    <img src="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full.jpg" alt="Living room with exposed wood ceiling beams, a terracotta sofa, and gallery wall, Studio Loom, Gurugram" loading="lazy">
+    <picture><source srcset="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-full-sm.avif" type="image/avif"><source srcset="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-full-sm.webp" type="image/webp"><img src="/assets/images/solanki-residence/home-hero-living-room-terracotta-bench-gurugram-08-full-sm.jpg" alt="Living room with a terracotta bench, olive armchairs, and abstract art, Studio Loom, Gurugram" loading="lazy"></picture>
+    <picture><source srcset="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-full-sm.avif" type="image/avif"><source srcset="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-full-sm.webp" type="image/webp"><img src="/assets/images/solanki-residence/home-hero-bedroom-blue-headboard-gurugram-06-full-sm.jpg" alt="Bedroom with a navy upholstered headboard, brass sconces, and warm wood tones, Studio Loom, Gurugram" loading="lazy"></picture>
+    <picture><source srcset="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-full-sm.avif" type="image/avif"><source srcset="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-full-sm.webp" type="image/webp"><img src="/assets/images/solanki-residence/home-hero-living-room-striped-wallpaper-gurugram-09-full-sm.jpg" alt="Living room with striped wallpaper, cane-back sofas, and green velvet cushions, Studio Loom, Gurugram" loading="lazy"></picture>
+    <picture><source srcset="/assets/images/solanki-residence/gallery-family-room-terracotta-sofa-gurugram-01-full-sm.avif" type="image/avif"><source srcset="/assets/images/solanki-residence/gallery-family-room-terracotta-sofa-gurugram-01-full-sm.webp" type="image/webp"><img src="/assets/images/solanki-residence/gallery-family-room-terracotta-sofa-gurugram-01-full-sm.jpg" alt="Family room with a terracotta velvet sofa, cream sectional, and framed artwork, Studio Loom, Gurugram" loading="lazy"></picture>
+    <picture><source srcset="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-full-sm.avif" type="image/avif"><source srcset="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-full-sm.webp" type="image/webp"><img src="/assets/images/solanki-residence/home-hero-bedroom-dark-headboard-gurugram-10-full-sm.jpg" alt="Bedroom with a dark upholstered headboard, abstract art, and walk-in closet, Studio Loom, Gurugram" loading="lazy"></picture>
+    <picture><source srcset="/assets/images/solanki-residence/gallery-living-room-rattan-chair-gurugram-02-full-sm.avif" type="image/avif"><source srcset="/assets/images/solanki-residence/gallery-living-room-rattan-chair-gurugram-02-full-sm.webp" type="image/webp"><img src="/assets/images/solanki-residence/gallery-living-room-rattan-chair-gurugram-02-full-sm.jpg" alt="Living room with a rattan lounge chair, marble coffee table, and sheer curtains, Studio Loom, Gurugram" loading="lazy"></picture>
+    <picture><source srcset="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full-sm.avif" type="image/avif"><source srcset="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full-sm.webp" type="image/webp"><img src="/assets/images/solanki-residence/home-hero-living-room-wood-beam-gurugram-03-full-sm.jpg" alt="Living room with exposed wood ceiling beams, a terracotta sofa, and gallery wall, Studio Loom, Gurugram" loading="lazy"></picture>
   </div>
   <div class="gallery-controls">
     <button class="gallery-btn gallery-prev" aria-label="Previous project photo">←</button>

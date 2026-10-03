@@ -250,9 +250,31 @@ function buildPage(meta, body) {
   if (meta.schema?.faq) fullBody += renderFaqSection(meta.schema.faq, meta.faqImage);
 
   const ogImage = meta.ogImage ? `${SITE_URL}${meta.ogImage}` : `${SITE_URL}/assets/images/og/default-og.jpg`;
-  const preload = meta.preloadImage
-    ? `<link rel="preload" as="image" href="${meta.preloadImage}" type="image/webp">`
-    : '';
+  // Responsive preload: the LCP image now ships a smaller "-sm" variant for narrow
+  // viewports via srcset (see src/pages/**/*.html and scripts/process-images.js). A plain
+  // `href`-only preload would always fetch the large desktop file regardless of viewport,
+  // which on mobile means paying for BOTH that wasted preload AND the correctly-sized file
+  // the <picture> srcset actually renders. `imagesrcset`/`imagesizes` lets the preload scanner
+  // pick the same candidate the picture element will, so mobile preloads the small one.
+  //
+  // Preloaded as AVIF, not WebP: the <picture> markup lists <source type="image/avif"> before
+  // webp, so any browser that reaches this preload also ends up choosing avif in the picture
+  // element itself. Preloading webp while the picture picks avif would fetch BOTH (the
+  // preload, unused, plus the avif the picture actually renders) — strictly worse than no
+  // preload. A browser without AVIF support just ignores a `type="image/avif"` preload
+  // (per spec, a `type` it can't render means the preload is skipped, not a fallback fetch)
+  // and gets the same un-preloaded webp/jpg it always would have.
+  const RESPONSIVE_WIDTHS = { hero: [2560, 1280], 'service-hero': [1440, 720] };
+  const preload = (() => {
+    if (!meta.preloadImage) return '';
+    const m = meta.preloadImage.match(/^(.*\/[a-z0-9-]+-(hero|service-hero))\.webp$/);
+    if (!m) return `<link rel="preload" as="image" href="${meta.preloadImage}" type="image/webp">`;
+    const [, base, suffix] = m;
+    const [big, small] = RESPONSIVE_WIDTHS[suffix];
+    const smBase = base.replace(new RegExp(`-${suffix}$`), `-${suffix}-sm`);
+    const imagesrcset = `${smBase}.avif ${small}w, ${base}.avif ${big}w`;
+    return `<link rel="preload" as="image" href="${base}.avif" imagesrcset="${imagesrcset}" imagesizes="100vw" type="image/avif">`;
+  })();
 
   let html = shellTemplate
     .replace(/{{TITLE}}/g, esc(meta.title))

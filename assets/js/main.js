@@ -30,6 +30,31 @@
     });
   }
 
+  // Hero slides below are positioned inset:0 and merely opacity:0 — geometrically "in
+  // viewport" from the browser's point of view, so loading="lazy" never actually defers
+  // them. Instead they ship with no real src at all (see data-src/data-srcset) and we
+  // populate those here once the page has finished loading, well ahead of when each
+  // slide is actually due to appear.
+  function loadDeferredHeroSlides() {
+    document.querySelectorAll('.hero-slide:not(.active) picture').forEach((picture) => {
+      picture.querySelectorAll('source[data-srcset]').forEach((source) => {
+        source.srcset = source.dataset.srcset;
+        source.removeAttribute('data-srcset');
+      });
+      const img = picture.querySelector('img[data-src]');
+      if (img) {
+        if (img.dataset.srcset) {
+          img.srcset = img.dataset.srcset;
+          img.removeAttribute('data-srcset');
+        }
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      }
+    });
+  }
+  if (document.readyState === 'complete') loadDeferredHeroSlides();
+  else window.addEventListener('load', loadDeferredHeroSlides);
+
   document.querySelectorAll('.hero-slideshow').forEach((slideshow) => {
     const slides = slideshow.querySelectorAll('.hero-slide');
     if (slides.length < 2) return;
