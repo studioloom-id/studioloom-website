@@ -10,7 +10,6 @@
   --bone: #FAF7F2;
   --sand: #E8DFD0;
   --terracotta: #BC6044;
-  --terracotta-text: #8D4833; /* deeper terracotta for small/thin label text — meets 4.5:1 contrast on bone and sand, where the base --terracotta falls short */
   --greige: #A09080;
   --espresso: #4A3F35;
   --font-display: 'Cormorant Garamond', serif;
@@ -205,7 +204,7 @@ img { max-width: 100%; }
 section { padding: var(--pad-v) var(--pad-h); }
 .section-label {
   font-family: var(--font-body); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--terracotta-text); margin-bottom: 1.1rem;
+  text-transform: uppercase; color: var(--terracotta); margin-bottom: 1.1rem;
   display: block;
 }
 .section-title {
@@ -214,9 +213,6 @@ section { padding: var(--pad-v) var(--pad-h); }
 }
 .section-title em { font-style: italic; color: var(--terracotta); }
 .section-title.on-dark { color: var(--bone); }
-/* .section-label defaults to the deeper --terracotta-text for AA contrast on bone/sand;
-   sections on a dark (umber) background need the lighter --terracotta back */
-.section-label.on-dark { color: var(--terracotta); }
 .body-copy {
   font-family: var(--font-body); font-weight: 300; font-size: 0.92rem;
   line-height: 1.9; color: var(--espresso); max-width: 620px;
@@ -276,10 +272,10 @@ section { padding: var(--pad-v) var(--pad-h); }
 .cards-grid > .service-card:nth-child(-n+3) { border-top: none; }
 .cards-grid.cols-2 > .service-card:nth-child(-n+2) { border-top: none; }
 .service-card:hover { background: var(--sand); }
-.service-num { font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 0.25em; color: var(--terracotta-text); margin-bottom: 1.5rem; }
+.service-num { font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 0.25em; color: var(--terracotta); margin-bottom: 1.5rem; }
 .service-name { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 1rem; }
 .service-desc { font-family: var(--font-body); font-weight: 300; font-size: 0.82rem; line-height: 1.8; color: var(--espresso); }
-.service-card .learn-more { display: inline-block; margin-top: 1.2rem; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta-text); }
+.service-card .learn-more { display: inline-block; margin-top: 1.2rem; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); }
 
 /* ============ WORK / PORTFOLIO GRID ============ */
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
@@ -405,7 +401,7 @@ span.project-name { color: var(--espresso); }
 .form-status { font-size: 0.82rem; margin-top: 1rem; display: none; }
 .form-status.visible { display: block; }
 .form-status.success { color: #4d7a4d; }
-.form-status.error { color: var(--terracotta-text); }
+.form-status.error { color: var(--terracotta); }
 
 /* ============ FOOTER ============ */
 footer { background: var(--umber); padding-top: 4rem; border-top: 1px solid rgba(250,247,242,0.08); }
