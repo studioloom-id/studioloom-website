@@ -399,6 +399,10 @@ span.project-name { color: var(--espresso); }
 .contact-method-label { font-family: var(--font-body); font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--greige); }
 .contact-method-value { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; color: var(--umber); text-decoration: none; transition: color 0.2s; }
 .contact-method-value:hover { color: var(--terracotta); }
+/* Centered variant — a compact row of label-over-value blocks (address/phone/email),
+   used for the closing contact-info strip rather than the stacked label|value list above. */
+.contact-methods.inline { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 3rem; margin-top: 0; border-top: none; }
+.contact-methods.inline .contact-method { flex-direction: column; align-items: center; gap: 0.6rem; padding: 0; border-bottom: none; }
 
 .enquiry-form { display: grid; gap: 1.4rem; max-width: 480px; margin-top: 2rem; }
 .enquiry-form label { font-family: var(--font-body); font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--greige); display: block; margin-bottom: 0.5rem; }
