@@ -191,6 +191,12 @@ img { max-width: 100%; }
   transition: background 0.25s; display: inline-block; border: none; cursor: pointer;
 }
 .btn-primary:hover { background: #a0503a; }
+/* Nav "Get in touch" and the link-style "Send a brief" button share one box: same padding, border, line-height, and min-width (font size untouched) */
+.nav-cta, a.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box;
+  min-width: 11.5rem; padding: 0.75rem 1.6rem; line-height: 1.2; border: 1px solid var(--terracotta); text-align: center;
+}
+a.btn-primary:hover { border-color: #a0503a; }
 .btn-ghost {
   font-family: var(--font-body); font-weight: 400; font-size: 0.68rem;
   letter-spacing: 0.18em; text-transform: uppercase; color: rgba(250,247,242,0.85);

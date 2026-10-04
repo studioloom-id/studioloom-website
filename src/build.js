@@ -80,7 +80,7 @@ function renderFooter(opts = {}) {
       <h2 class="footer-cta-title">Ready to <em>begin?</em></h2>
       <p class="footer-cta-copy">Every project starts with a structured consultation.</p>
     </div>
-    <a class="btn-primary" href="/contact">Send us your brief</a>
+    <a class="btn-primary" href="/contact">Send a brief</a>
   </div>
 `;
   return `<footer>
