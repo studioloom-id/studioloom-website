@@ -157,6 +157,16 @@ img { max-width: 100%; }
   padding: 0; overflow: hidden; margin-top: 0;
 }
 .page-hero .hero-content { padding: 0 var(--pad-h) 4rem; }
+/* Full-frame hero: the section takes the photo's own 16:9 ratio, so the image is never cropped */
+.page-hero.hero-full-frame { min-height: 0; aspect-ratio: 16 / 9; }
+.hero-full-frame .hero-bg img { object-fit: contain; }
+@media (max-width: 768px) {
+  /* Narrow screens: photo sits at its own ratio, title block follows below it */
+  .page-hero.hero-full-frame { aspect-ratio: auto; flex-direction: column; align-items: stretch; background: var(--umber); }
+  .hero-full-frame .hero-bg { position: relative; inset: auto; aspect-ratio: 16 / 9; }
+  .hero-full-frame .hero-overlay { display: none; }
+  .hero-full-frame .hero-content { padding-top: 2rem; }
+}
 .page-hero .hero-headline { font-size: clamp(2.4rem, 4.4vw, 4.2rem); }
 .page-hero .hero-headline em { font-size: 0.5em; }
 
