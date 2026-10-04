@@ -54,6 +54,7 @@ img { max-width: 100%; }
   background: var(--bone);
   border-bottom-color: rgba(33,26,20,0.1);
 }
+.nav-links { margin-left: auto; margin-right: 2.4rem; }  /* links sit right, beside Get in touch */
 .nav-logo { display: flex; flex-direction: row; align-items: center; gap: 0.9rem; text-decoration: none; }
 .nav-logo-mark { width: 36px; height: 36px; transition: filter 0.4s; filter: invert(1) brightness(0.9); }
 #navbar.scrolled .nav-logo-mark, #navbar.solid .nav-logo-mark { filter: invert(0) brightness(0.15); }
@@ -353,10 +354,10 @@ span.project-name { color: var(--espresso); }
 .spec-list li::before { content: '—'; position: absolute; left: 0; color: var(--terracotta); }
 
 /* ============ STATEMENT (full-bleed dark editorial section) ============ */
-.statement-section { background: var(--umber); color: var(--bone); text-align: center; padding: 6rem var(--pad-h); }
+.statement-section { background: var(--umber); color: var(--bone); text-align: left; padding: 6rem var(--pad-h); }
 .lead-copy {
   font-family: var(--font-body); font-weight: 300; font-size: var(--text-body);
-  line-height: 1.8; color: rgba(250,247,242,0.88); max-width: 680px; margin: 0 auto;
+  line-height: 1.8; color: rgba(250,247,242,0.88); max-width: 680px; margin: 0;
 }
 .lead-copy + .lead-copy { margin-top: 1.6rem; }
 .lead-copy em { font-style: italic; color: var(--bone); }
@@ -477,6 +478,7 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   #navbar { padding: 1.2rem 2rem; }
   #navbar.scrolled, #navbar.solid { padding: 0.8rem 2rem; }
   .nav-links {
+    margin: 0;
     display: none; position: fixed; inset: 0 0 0 auto; width: min(320px, 80vw);
     background: var(--umber); flex-direction: column; align-items: flex-start;
     padding: 6rem 2rem 2rem; gap: 1.6rem; z-index: 99;
