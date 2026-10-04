@@ -16,6 +16,14 @@ function esc(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+// Renders a footer social link as a real <a> once nap.json has a URL for it, or as
+// plain (non-clickable) text meanwhile — never ships a placeholder/dead href.
+function socialLink(label, url) {
+  return url
+    ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`
+    : `<span class="footer-social-pending">${esc(label)}</span>`;
+}
+
 // ---------- NAV ----------
 function renderNav(opts) {
   const solidClass = opts.solid ? ' solid' : '';
@@ -99,8 +107,8 @@ function renderFooter() {
     <div class="footer-contact-item">
       <span class="footer-contact-label">Social</span>
       <div class="footer-social">
-        <a href="${nap.social.instagram}" target="_blank" rel="noopener">Instagram</a>
-        <a href="${nap.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
+        ${socialLink('Houzz', nap.social.houzz)}
+        ${socialLink('Pinterest', nap.social.pinterest)}
       </div>
     </div>
   </div>
@@ -121,9 +129,10 @@ function websiteSchema() {
 }
 
 function interiorDesignerSchema() {
-  const sameAs = [nap.social.instagram, nap.social.linkedin];
-  if (nap.social.gbp) sameAs.push(nap.social.gbp);
-  return {
+  // Only confirmed, real profile URLs belong in sameAs — a placeholder would be
+  // inaccurate structured data, worse than omitting the field entirely.
+  const sameAs = [nap.social.houzz, nap.social.pinterest, nap.social.gbp].filter(Boolean);
+  const schema = {
     '@context': 'https://schema.org',
     '@type': 'InteriorDesigner',
     name: nap.name,
@@ -154,8 +163,9 @@ function interiorDesignerSchema() {
       opens: nap.openingHours.opens,
       closes: nap.openingHours.closes,
     },
-    sameAs,
   };
+  if (sameAs.length) schema.sameAs = sameAs;
+  return schema;
 }
 
 function breadcrumbSchema(breadcrumb) {
