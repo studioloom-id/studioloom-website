@@ -233,7 +233,7 @@ function renderFaqSection(faq, image) {
 <section class="faq-section">
   <div class="fade-up">
     <span class="section-label">Common Questions</span>
-    <h2 class="section-title">Frequently asked.</h2>
+    <h2 class="section-title">Frequently <em>asked.</em></h2>
     <div class="faq-list">
 ${items}
     </div>
@@ -245,7 +245,7 @@ ${items}
 <section class="split-section faq-split fade-up">
   <div class="split-text">
     <span class="section-label">Common Questions</span>
-    <h2 class="section-title">Frequently asked.</h2>
+    <h2 class="section-title">Frequently <em>asked.</em></h2>
     <div class="faq-list">
 ${items}
     </div>
