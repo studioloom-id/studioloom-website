@@ -516,6 +516,8 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .gallery-track { padding: 0 2rem; }
 }
 @media (max-width: 640px) {
+  /* Phone width: let the nav button shrink so it doesn't cover the logo */
+  .nav-cta { min-width: 0; padding: 0.65rem 1rem; }
   .about-philosophy { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
