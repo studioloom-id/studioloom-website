@@ -434,6 +434,13 @@ span.project-name { color: var(--espresso); }
 }
 .enquiry-form input:focus, .enquiry-form select:focus, .enquiry-form textarea:focus { border-color: var(--terracotta); }
 .enquiry-form textarea { resize: vertical; min-height: 90px; }
+.form-success { display: none; margin-top: 0.5rem; outline: none; }
+.form-success .body-copy { margin-top: 1rem; }
+/* After a successful send: the heading and form give way to the confirmation */
+#contact.is-sent .split-text > .section-label,
+#contact.is-sent .split-text > .section-title,
+#contact.is-sent .enquiry-form { display: none; }
+#contact.is-sent .form-success { display: block; }
 .form-note { font-size: 0.76rem; color: var(--greige); margin-top: 0.4rem; }
 .form-status { font-size: 0.82rem; margin-top: 1rem; display: none; }
 .form-status.visible { display: block; }

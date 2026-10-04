@@ -22,9 +22,20 @@
       });
 
       if (response.ok) {
-        status.className = 'form-status visible success';
-        status.textContent = "Thank you — we've received your enquiry and will be in touch shortly.";
+        // Swap the whole form for a confirmation so it's clear the enquiry went through
+        status.className = 'form-status';
+        status.textContent = '';
         form.reset();
+        const section = document.getElementById('contact');
+        const success = document.getElementById('form-success');
+        if (section && success) {
+          section.classList.add('is-sent');
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          success.focus({ preventScroll: true });
+        } else {
+          status.className = 'form-status visible success';
+          status.textContent = "Thank you — we've received your enquiry and will be in touch shortly.";
+        }
         if (window.gtag) window.gtag('event', 'generate_lead');
       } else {
         throw new Error('Form submission failed');
