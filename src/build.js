@@ -78,18 +78,34 @@ function renderFooter() {
         </div>
       </div>
       <p class="footer-tagline">${esc(nap.tagline)}</p>
-      <div class="footer-nap">
-        ${esc(nap.address.display)}<br>
-        <a href="tel:${nap.phone.tel}">${esc(nap.phone.display)}</a><br>
-        <a href="mailto:${nap.email}">${esc(nap.email)}</a>
-      </div>
     </div>
     <div class="footer-cols">
       ${cols}
     </div>
   </div>
+  <div class="footer-contact">
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">Address</span>
+      <span class="footer-contact-value">${esc(nap.address.display)}</span>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">Phone</span>
+      <a class="footer-contact-value" href="tel:${nap.phone.tel}">${esc(nap.phone.display)}</a>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">Email</span>
+      <a class="footer-contact-value" href="mailto:${nap.email}">${esc(nap.email)}</a>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">Social</span>
+      <div class="footer-social">
+        <a href="${nap.social.instagram}" target="_blank" rel="noopener">Instagram</a>
+        <a href="${nap.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
   <div class="footer-bottom">
-    <span class="footer-copy">&copy; ${nap.copyrightYear} Studio Loom</span>
+    <span class="footer-copy">&copy; ${nap.copyrightYear} Studio Loom. All rights reserved.</span>
   </div>
 </footer>`;
 }
