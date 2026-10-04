@@ -4,6 +4,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = path.join(__dirname, '..');
 const SITE_URL = 'https://studioloom.co.in';
@@ -265,6 +266,22 @@ function parsePage(raw) {
 }
 
 // ---------- Build one page ----------
+
+// Fingerprint local CSS/JS URLs (?v=<content hash>) so a changed file is never served from a
+// visitor's cache (GitHub Pages sends max-age=600) against newer HTML.
+const assetVersions = {};
+function versionAssets(html) {
+  return html.replace(/(["'])(\/assets\/(?:css|js)\/[\w.-]+\.(?:css|js))\1/g, (m, q, url) => {
+    if (!assetVersions[url]) {
+      const file = path.join(__dirname, '..', url);
+      assetVersions[url] = fs.existsSync(file)
+        ? crypto.createHash('md5').update(fs.readFileSync(file)).digest('hex').slice(0, 8)
+        : '';
+    }
+    return assetVersions[url] ? `${q}${url}?v=${assetVersions[url]}${q}` : m;
+  });
+}
+
 function buildPage(meta, body) {
   const canonical = `${SITE_URL}${meta.url === '/' ? '' : meta.url}`;
   const schemaBlocks = [];
@@ -323,7 +340,7 @@ function buildPage(meta, body) {
     .replace(/{{FOOTER}}/g, renderFooter({ noCta: ['/contact','/404','/privacy-policy'].includes(meta.url) }))
     .replace(/{{EXTRA_SCRIPTS}}/g, meta.extraScripts || '');
 
-  return html;
+  return versionAssets(html);
 }
 
 function outputPathFor(url) {
