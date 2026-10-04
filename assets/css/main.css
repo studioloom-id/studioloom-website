@@ -443,26 +443,27 @@ span.project-name { color: var(--espresso); }
 /* ============ FOOTER ============ */
 /* Single-row footer: brand on one side, Address/Phone/Email/Social on the other,
    then a slim copyright bar — no nav-link columns. */
-footer { background: var(--umber); padding-top: 3rem; }
+footer { background: var(--umber); padding-top: 4rem; }
 .footer-cta {
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem 3rem;
-  padding: 0 var(--pad-h) 3rem;
+  padding: 0 var(--pad-h) 4rem;
 }
 .footer-cta-title { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.8rem, 2.6vw, 2.4rem); line-height: 1.1; color: var(--bone); letter-spacing: -0.01em; }
 .footer-cta-title em { font-style: italic; color: var(--terracotta); }
 .footer-cta-copy { font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); color: rgba(250,247,242,0.65); margin-top: 0.6rem; }
 .footer-main {
-  display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;
-  gap: 2rem 3rem; padding: 0 var(--pad-h) 3rem;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.4fr auto; column-gap: 3rem; row-gap: 2rem; align-items: start;
+  padding: 0 var(--pad-h) 3.5rem;
 }
 .footer-brand { max-width: 280px; }
+.footer-contact { display: contents; }  /* items sit directly on the footer grid, aligned to its columns */
 .footer-logo-row { display: flex; align-items: center; gap: 0.7rem; }
 .footer-logo-row .nav-logo-mark { filter: invert(1) brightness(0.9); }
 .footer-logo-studio { font-family: var(--font-body); font-weight: 400; font-size: 0.55rem; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(250,247,242,0.4); display: block; line-height: 1; margin-bottom: 3px; }
 .footer-logo-loom { font-family: var(--font-display); font-weight: 300; font-size: 1.4rem; color: var(--bone); display: block; line-height: 1; }
 .footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 0.85rem; color: rgba(250,247,242,0.35); margin-top: 0.5rem; }
-.footer-contact { display: flex; flex-wrap: wrap; gap: 1.8rem 2.4rem; }
-.footer-contact-item { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-contact-item { display: flex; flex-direction: column; gap: 0.7rem; padding-top: 0.35rem; }
+.footer-contact-item:last-child { align-items: flex-end; }  /* social icons end on the right margin, level with the CTA button */
 .footer-contact-label { font-family: var(--font-body); font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(250,247,242,0.5); }
 .footer-contact-value { font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); color: rgba(250,247,242,0.85); text-decoration: none; transition: color 0.2s; }
 a.footer-contact-value:hover { color: var(--terracotta); }
@@ -527,7 +528,9 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .included-row { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .pg-item.wide { grid-column: span 2; }
-  .footer-main { padding: 0 2rem 2.5rem; }
+  .footer-main { padding: 0 2rem 2.5rem; grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-contact-item:last-child { align-items: flex-start; }
   .footer-cta { padding: 0 2rem 2.5rem; }
   .footer-bottom { padding: 1.2rem 2rem; }
   .statement-section { padding: 4rem 2rem; }
