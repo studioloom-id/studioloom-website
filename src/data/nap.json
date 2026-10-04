@@ -32,8 +32,8 @@
     "display": "Monday to Saturday, 10:00 AM – 7:00 PM"
   },
   "social": {
-    "houzz": null,
-    "pinterest": null,
+    "houzz": "https://www.houzz.in/pro/studio-loom/__public",
+    "pinterest": "https://in.pinterest.com/studioloomid/",
     "gbp": null
   },
   "yearEstablished": 2022,
