@@ -376,6 +376,10 @@ span.project-name { color: var(--espresso); }
 .timeline li { position: relative; padding: 0 0 1.9rem 2.6rem; font-family: var(--font-display); font-weight: 300; font-size: 1.35rem; line-height: 1.4; color: var(--bone); }
 .timeline li:last-child { padding-bottom: 0; }
 .timeline li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 9px; height: 9px; border-radius: 50%; background: var(--terracotta); }
+/* Steps on the left, photo on the right (photos are 3:2 and shown whole) */
+.included-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 5rem; align-items: center; }
+.included-media picture { display: block; }
+.included-media img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; display: block; }
 /* Non-sequential group (e.g. "Suited to"): plain text columns with a thin rule above each */
 .included-sub { font-family: var(--font-body); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracotta); margin: 4.5rem 0 1.6rem; }
 .suited-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
@@ -521,6 +525,7 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
+  .included-row { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .pg-item.wide { grid-column: span 2; }
   .footer-main { padding: 0 2rem 2.5rem; }
