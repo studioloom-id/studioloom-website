@@ -31,6 +31,12 @@ const DERIVATIVES = [
   ['grid', 800, 600, 60, ALL],
   ['og', 1200, 630, 120, ['jpeg']],
 ];
+// Opt-in 4:5 portrait tier (manifest entry needs "portrait": true; source must be portrait) —
+// kept out of DERIVATIVES so landscape sources are never cropped into portrait.
+const PORTRAIT_DERIVATIVES = [
+  ['portrait', 960, 1200, 150, ALL],
+  ['portrait-sm', 480, 600, 60, ALL],
+];
 
 const QUALITY = {
   webp: { start: 82, floor: 35, step: 8 },
@@ -70,7 +76,10 @@ async function main() {
     }
     const srcMeta = await sharp(srcPath).metadata();
 
-    for (const [name, w, h, maxKB, formats] of DERIVATIVES) {
+    const derivatives = process.env.ONLY_PORTRAIT
+      ? (entry.portrait ? PORTRAIT_DERIVATIVES : [])
+      : DERIVATIVES.concat(entry.portrait ? PORTRAIT_DERIVATIVES : []);
+    for (const [name, w, h, maxKB, formats] of derivatives) {
       const base = sharp(srcPath).resize(w, h, {
         fit: 'cover',
         position: entry.gravity || 'center',

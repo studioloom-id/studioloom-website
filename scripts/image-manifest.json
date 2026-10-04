@@ -21,7 +21,8 @@
     "source": "Solanki Bedroom 01.png",
     "slug": "solanki-residence-bedroom-quiet-luxury-gurugram-01",
     "alt": "Quiet luxury bedroom with linen headboard and solid wood frame, Studio Loom, Gurugram",
-    "gravity": "north"
+    "gravity": "north",
+    "portrait": true
   },
   {
     "source": "Solanki Bedroom 03.png",
