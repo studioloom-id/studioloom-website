@@ -74,9 +74,17 @@ function renderNav(opts) {
 }
 
 // ---------- FOOTER ----------
-function renderFooter() {
+function renderFooter(opts = {}) {
+  const cta = opts.noCta ? '' : `  <div class="footer-cta">
+    <div class="footer-cta-text">
+      <h2 class="footer-cta-title">Ready to <em>begin?</em></h2>
+      <p class="footer-cta-copy">Every project starts with a structured consultation.</p>
+    </div>
+    <a class="btn-primary" href="/contact">Send us your brief</a>
+  </div>
+`;
   return `<footer>
-  <div class="footer-main">
+${cta}  <div class="footer-main">
     <div class="footer-brand">
       <div class="footer-logo-row">
         <img class="nav-logo-mark" src="/assets/images/brand/studio-loom-mark.png" width="32" height="32" alt="Studio Loom mark">
@@ -312,7 +320,7 @@ function buildPage(meta, body) {
     .replace(/{{EXTRA_HEAD}}/g, meta.extraHead || '')
     .replace(/{{NAV}}/g, renderNav({ solid: !!meta.solidNav }))
     .replace(/{{BODY}}/g, fullBody)
-    .replace(/{{FOOTER}}/g, renderFooter())
+    .replace(/{{FOOTER}}/g, renderFooter({ noCta: ['/contact','/404','/privacy-policy'].includes(meta.url) }))
     .replace(/{{EXTRA_SCRIPTS}}/g, meta.extraScripts || '');
 
   return html;
