@@ -260,7 +260,8 @@ section { padding: var(--pad-v) var(--pad-h); }
 .split-img-inset picture { display: block; width: 100%; }
 /* Images are 3:2 — render at their own ratio, centred in the cell, never cropped */
 .split-img-inset img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; display: block; }
-.split-img-inset img.portrait { aspect-ratio: 4 / 5; max-width: 480px; margin: 0; }
+.split-img-inset img.portrait { aspect-ratio: 4 / 5; }  /* fills the cell width */
+.split-img-inset:has(img.portrait) { align-items: flex-start; }  /* top-aligned with the form */
 .split-section.reverse { direction: rtl; }
 .split-section.reverse > * { direction: ltr; }
 
