@@ -23,7 +23,7 @@
     "longitude": 77.0266,
     "note": "TODO: replace with exact studio address lat/long once confirmed"
   },
-  "areaServed": ["Gurugram", "Delhi", "Noida", "Greater Noida", "Faridabad", "Delhi NCR"],
+  "areaServed": ["India", "Delhi NCR", "Gurugram", "Delhi", "Noida", "Greater Noida", "Faridabad"],
   "priceRange": "₹₹₹",
   "openingHours": {
     "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],

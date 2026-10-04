@@ -368,16 +368,18 @@ span.project-name { color: var(--espresso); }
 .process-card { padding: 3rem 2.5rem; border-right: 1px solid rgba(250,247,242,0.12); border-bottom: 1px solid rgba(250,247,242,0.12); }
 .process-card-desc { font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); line-height: 1.8; color: rgba(250,247,242,0.65); }
 
-/* ============ INCLUDED (service pages — "what's included" / "how it works"): icon grid under the heading ============ */
+/* ============ INCLUDED (service pages): a quiet vertical sequence under the heading ============ */
 .included-head { margin-bottom: 3.5rem; max-width: 900px; }
-.included-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem 3rem; }
-.included-grid li { display: flex; flex-direction: column; align-items: flex-start; gap: 1.2rem; font-family: var(--font-display); font-weight: 300; font-size: 1.35rem; line-height: 1.3; color: var(--bone); }
-.included-icon {
-  width: 4.2rem; height: 4.2rem; border-radius: 50%; border: 1px solid rgba(188,96,68,0.6); background: rgba(188,96,68,0.08);
-  display: flex; align-items: center; justify-content: center; color: var(--terracotta);
-}
-.included-icon svg { width: 1.9rem; height: 1.9rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.included-sub { font-family: var(--font-body); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracotta); margin: 4rem 0 2rem; }
+/* Ordered steps: a single hairline runs through small terracotta nodes, so the sequence reads top to bottom */
+.timeline { list-style: none; margin: 0; padding: 0; max-width: 760px; position: relative; }
+.timeline::before { content: ''; position: absolute; left: 4px; top: 0.9rem; bottom: 0.9rem; width: 1px; background: rgba(250,247,242,0.18); }
+.timeline li { position: relative; padding: 0 0 1.9rem 2.6rem; font-family: var(--font-display); font-weight: 300; font-size: 1.35rem; line-height: 1.4; color: var(--bone); }
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 9px; height: 9px; border-radius: 50%; background: var(--terracotta); }
+/* Non-sequential group (e.g. "Suited to"): plain text columns with a thin rule above each */
+.included-sub { font-family: var(--font-body); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracotta); margin: 4.5rem 0 1.6rem; }
+.suited-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+.suited-list li { padding-top: 1.2rem; border-top: 1px solid rgba(250,247,242,0.18); font-family: var(--font-display); font-weight: 300; font-size: 1.2rem; line-height: 1.4; color: var(--bone); }
 
 /* ============ PROJECT GALLERY CAROUSEL ============ */
 .gallery-carousel { background: var(--umber); padding: 4rem 0; overflow: hidden; }
@@ -518,7 +520,7 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .split-img-inset { padding: 0; min-height: 60vw; }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
-  .included-grid { grid-template-columns: 1fr 1fr; }
+  .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .pg-item.wide { grid-column: span 2; }
   .footer-main { padding: 0 2rem 2.5rem; }
@@ -528,7 +530,6 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .gallery-track { padding: 0 2rem; }
 }
 @media (max-width: 640px) {
-  .included-grid { grid-template-columns: 1fr; gap: 2rem; }
   /* Phone width: let the nav button shrink so it doesn't cover the logo */
   .nav-cta { min-width: 0; padding: 0.65rem 1rem; }
   .about-philosophy { grid-template-columns: 1fr; }
