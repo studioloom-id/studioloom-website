@@ -38,9 +38,8 @@ under `assets/images/` are committed. To reprocess or add new photography:
 - **Cost calculator pricing** (`assets/js/cost-calculator.js`) — every number
   in `PRICING_TABLE` is a placeholder extrapolated from a single confirmed
   data point. Needs business-owner sign-off before it's real published pricing.
-- **Contact form** (`src/pages/contact.html`) — the form still posts to a
-  placeholder Formspree-style URL (`TODO_REPLACE_WITH_REAL_FORM_ID`). Create a
-  real form-backend account and swap in the real endpoint.
+- **Contact form** (`src/pages/contact.html`) — posts to Formspree (`mrpezrrd`). Submissions
+  are emailed to the account owner; check spam filters and the Formspree dashboard.
 - **GA4 / Search Console** — scaffolded but commented out in
   `src/partials/shell.html` with `G-XXXXXXXXXX` placeholders. Fill in once
   those properties exist.

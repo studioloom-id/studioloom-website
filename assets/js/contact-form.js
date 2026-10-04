@@ -1,8 +1,6 @@
 // Studio Loom — enquiry form submission handler.
-// TODO: the form's `action` attribute in contact/index.html still points at a
-// placeholder Formspree endpoint. Once a real static-form account exists, replace
-// that URL and this will work as-is (Formspree/Web3Forms both accept AJAX POSTs
-// with an Accept: application/json header, which is what this sends).
+// The form's `action` (contact page) is the Formspree endpoint; this sends an AJAX POST with
+// an Accept: application/json header so the page stays put and shows a status message.
 (function () {
   const form = document.getElementById('enquiry-form');
   const status = document.getElementById('form-status');
