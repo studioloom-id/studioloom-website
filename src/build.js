@@ -282,6 +282,15 @@ function versionAssets(html) {
   });
 }
 
+// Line icons for the "included" grids on service pages: write <i data-i="name"></i> in a page.
+const INCLUDED_ICONS = {"chat": "M4 5h16v11H9l-5 4z", "plan": "M4 4h16v16H4z M4 11h8 M12 4v16 M12 15h8", "pencil": "M4 20l1-5L16 4l4 4L9 19z M14 6l4 4", "swatch": "M12 3l9 5-9 5-9-5z M3 12l9 5 9-5 M3 16l9 5 9-5", "chair": "M7 4h10v7H7z M5 11h14v4H5z M7 15v5 M17 15v5", "bulb": "M9 18h6 M10 21h4 M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z", "drawings": "M5 3h10l4 4v14H5z M15 3v4h4 M8 12h8 M8 16h8", "box": "M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10", "site": "M4 21h16 M6 21V9h7v12 M13 21V5h5v16 M9 12h1 M9 15h1 M15 9h1 M15 13h1", "key": "M8 14a4 4 0 1 1 3.5-6H21v3h-2v2h-3v-2h-4.5A4 4 0 0 1 8 14z", "frame": "M4 5h16v14H4z M7 16l3.5-4 3 3 2-2 2.5 3", "textile": "M3 8c3-2 6 2 9 0s6 2 9 0 M3 13c3-2 6 2 9 0s6 2 9 0 M3 18c3-2 6 2 9 0s6 2 9 0", "eye": "M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z", "sliders": "M4 7h10 M18 7h2 M4 17h2 M10 17h10 M14 4v6 M6 14v6", "sparkle": "M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z", "home": "M3 11l9-7 9 7 M5 10v10h14V10 M10 20v-6h4v6", "refresh": "M20 12a8 8 0 1 1-2.5-5.8 M20 4v5h-5", "camera": "M3 8h4l2-3h6l2 3h4v12H3z M12 11a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"};
+function renderIcons(html) {
+  return html.replace(/<i data-i="([a-z]+)"><\/i>/g, (m, name) =>
+    INCLUDED_ICONS[name]
+      ? `<span class="included-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${INCLUDED_ICONS[name]}"/></svg></span>`
+      : m);
+}
+
 function buildPage(meta, body) {
   const canonical = `${SITE_URL}${meta.url === '/' ? '' : meta.url}`;
   const schemaBlocks = [];
@@ -340,7 +349,7 @@ function buildPage(meta, body) {
     .replace(/{{FOOTER}}/g, renderFooter({ noCta: ['/contact','/404','/privacy-policy'].includes(meta.url) }))
     .replace(/{{EXTRA_SCRIPTS}}/g, meta.extraScripts || '');
 
-  return versionAssets(html);
+  return versionAssets(renderIcons(html));
 }
 
 function outputPathFor(url) {
