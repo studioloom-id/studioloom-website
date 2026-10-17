@@ -80,7 +80,15 @@ async function main() {
       ? (entry.portrait ? PORTRAIT_DERIVATIVES : [])
       : DERIVATIVES.concat(entry.portrait ? PORTRAIT_DERIVATIVES : []);
     for (const [name, w, h, maxKB, formats] of derivatives) {
-      const base = sharp(srcPath).resize(w, h, {
+      // Many source renders carry a thin dark strip on their outer edges (6-24px on a 3000px
+      // frame). Trim 1% from every side before resizing so it never shows as a black border.
+      const inset = Math.round(Math.min(srcMeta.width, srcMeta.height) * 0.01);
+      const base = sharp(srcPath).extract({
+        left: inset,
+        top: inset,
+        width: srcMeta.width - 2 * inset,
+        height: srcMeta.height - 2 * inset,
+      }).resize(w, h, {
         fit: 'cover',
         position: entry.gravity || 'center',
       });
