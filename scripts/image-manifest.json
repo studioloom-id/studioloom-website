@@ -43,18 +43,6 @@
     "gravity": "center"
   },
   {
-    "source": "Bathroom 01.png",
-    "slug": "solanki-residence-bathroom-contemporary-indian-gurugram-01",
-    "alt": "Contemporary bathroom with natural stone and warm brass fixtures, Studio Loom, Gurugram",
-    "gravity": "north"
-  },
-  {
-    "source": "Dresser 01.png",
-    "slug": "solanki-residence-dresser-detail-gurugram-01",
-    "alt": "Custom dresser detail with brass hardware and sheesham wood, Studio Loom, Gurugram",
-    "gravity": "north"
-  },
-  {
     "source": "Lounge 01.png",
     "slug": "solanki-residence-lounge-contemporary-indian-gurugram-01",
     "alt": "Lounge with a floor-to-ceiling bookshelf wall, cream sofas, and a round marble coffee table, Studio Loom, Gurugram",

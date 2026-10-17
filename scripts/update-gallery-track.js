@@ -25,8 +25,6 @@ const ORDER = [
   'solanki-residence-dining-space-warm-neutrals-gurugram-01',
   'solanki-residence-lounge-contemporary-indian-gurugram-01',
   'solanki-residence-bedroom-quiet-luxury-gurugram-04',
-  'solanki-residence-bathroom-contemporary-indian-gurugram-01',
-  'solanki-residence-dresser-detail-gurugram-01',
   'solanki-residence-living-room-contemporary-indian-gurugram-01',
   // The Umber Office
   'umber-office-reception-gurugram-01',
