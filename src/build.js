@@ -12,6 +12,7 @@ const SITE_URL = 'https://studioloom.co.in';
 const nap = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'nap.json'), 'utf8'));
 const nav = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'nav.json'), 'utf8'));
 const shellTemplate = fs.readFileSync(path.join(__dirname, 'partials', 'shell.html'), 'utf8');
+const standaloneTemplate = fs.readFileSync(path.join(__dirname, 'partials', 'standalone.html'), 'utf8');
 
 function esc(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -284,6 +285,19 @@ function versionAssets(html) {
 
 function buildPage(meta, body) {
   const canonical = `${SITE_URL}${meta.url === '/' ? '' : meta.url}`;
+
+  // Standalone pages (e.g. /links) skip the site nav, footer and main.css: just head + the page's own markup
+  if (meta.standalone) {
+    const ogImage = meta.ogImage ? `${SITE_URL}${meta.ogImage}` : `${SITE_URL}/assets/images/og/default-og.jpg`;
+    return standaloneTemplate
+      .replace(/{{TITLE}}/g, esc(meta.title))
+      .replace(/{{DESCRIPTION}}/g, esc(meta.description))
+      .replace(/{{ROBOTS}}/g, meta.robots || 'index, follow')
+      .replace(/{{CANONICAL}}/g, canonical)
+      .replace(/{{OG_IMAGE}}/g, ogImage)
+      .replace(/{{EXTRA_HEAD}}/g, meta.extraHead || '')
+      .replace(/{{BODY}}/g, body);
+  }
   const schemaBlocks = [];
 
   if (meta.url === '/') {

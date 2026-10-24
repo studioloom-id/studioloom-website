@@ -36,7 +36,7 @@ function main() {
     const match = raw.match(/^<!--json([\s\S]*?)-->/);
     if (!match) continue;
     const meta = JSON.parse(match[1]);
-    if (meta.url === '/404' || (meta.robots && meta.robots.includes('noindex'))) continue;
+    if (meta.url === '/404' || meta.sitemap === false || (meta.robots && meta.robots.includes('noindex'))) continue;
     urls.push(meta.url);
   }
   urls.sort();
