@@ -22,19 +22,19 @@
     font-family: 'Jost', system-ui, sans-serif; font-weight: 300; line-height: 1.6;
     display: flex; justify-content: center; align-items: center; padding: 2.5rem 1.5rem;
   }
-  .links { width: 100%; max-width: 380px; text-align: center; }
+  .links { width: 100%; max-width: 320px; text-align: center; }
   .links-logo { width: 72px; height: 72px; display: block; margin: 0 auto 1.4rem; }
   .links-name { font-weight: 400; font-size: 1.05rem; letter-spacing: 0.42em; text-indent: 0.42em; text-transform: uppercase; }
   .links-tagline { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.35rem; color: var(--terracotta); margin-top: 0.5rem; }
   .links-intro { font-size: 0.95rem; margin: 1.4rem auto 2.2rem; max-width: 320px; }
-  .links-list { display: grid; gap: 0.8rem; }
+  .links-list { display: grid; gap: 0.7rem; justify-items: center; }
 
   /* To add a new link (Instagram, LinkedIn, etc.): copy one whole <a class="links-btn"> ... </a>
      block below, paste it where you want it in the list, then change the href and the label. */
   .links-btn {
-    display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0.8rem 1.2rem;
+    display: flex; align-items: center; justify-content: center; width: 100%; max-width: 260px; min-height: 48px; padding: 0.7rem 1rem;
     background: var(--terracotta); color: #fff; text-decoration: none;
-    font-weight: 400; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 400; font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase;
     transition: background 0.2s;
   }
   .links-btn:hover, .links-btn:focus-visible { background: var(--terracotta-dark); }
@@ -43,6 +43,12 @@
   .links-contact { margin-top: 2.2rem; display: grid; gap: 0.35rem; font-size: 0.95rem; }
   .links-contact a { color: var(--charcoal); text-decoration: none; }
   .links-contact a:hover { color: var(--terracotta); }
+
+  .links-social { margin-top: 1.8rem; display: flex; justify-content: center; gap: 0.6rem; }
+  .links-social a { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: var(--charcoal); transition: color 0.2s; }
+  .links-social a:hover { color: var(--terracotta); }
+  .links-social a:focus-visible { outline: 2px solid var(--charcoal); outline-offset: 2px; }
+  .links-social svg { width: 22px; height: 22px; fill: currentColor; }
 </style>
 
 <main class="links">
@@ -61,5 +67,11 @@
   <div class="links-contact">
     <a href="tel:+918800110317">+91 8800 110 317</a>
     <a href="mailto:projects@studioloom.co.in">projects@studioloom.co.in</a>
+  </div>
+
+  <!-- Social icons: to add one, copy a whole <a> ... </a> below and change the href, aria-label and the icon. -->
+  <div class="links-social">
+    <a href="https://www.houzz.in/pro/studio-loom/__public" target="_blank" rel="noopener noreferrer" aria-label="Studio Loom on Houzz (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1.27 0V24H9.32V16.44H14.68V24H22.73V10.37L6.61 5.75V0H1.27Z"/></svg></a>
+    <a href="https://in.pinterest.com/studioloomid/" target="_blank" rel="noopener noreferrer" aria-label="Studio Loom on Pinterest (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></a>
   </div>
 </main>
