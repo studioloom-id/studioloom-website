@@ -33,6 +33,12 @@ const DERIVATIVES = [
 ];
 // Opt-in 4:5 portrait tier (manifest entry needs "portrait": true; source must be portrait) —
 // kept out of DERIVATIVES so landscape sources are never cropped into portrait.
+// Opt-in large 3:2 banner tier (manifest entry needs "banner": true; source must be 3:2) — for full-frame
+// page banners that must not be cropped to 16:9.
+const BANNER_DERIVATIVES = [
+  ['banner', 2160, 1440, 260, ALL],
+  ['banner-sm', 1080, 720, 130, ALL],
+];
 const PORTRAIT_DERIVATIVES = [
   ['portrait', 960, 1200, 150, ALL],
   ['portrait-sm', 480, 600, 60, ALL],
@@ -76,7 +82,9 @@ async function main() {
     }
     const srcMeta = await sharp(srcPath).metadata();
 
-    const derivatives = process.env.ONLY_PORTRAIT
+    const derivatives = process.env.ONLY_BANNER
+      ? (entry.banner ? BANNER_DERIVATIVES : [])
+      : process.env.ONLY_PORTRAIT
       ? (entry.portrait ? PORTRAIT_DERIVATIVES : [])
       : entry.portraitOnly
         ? PORTRAIT_DERIVATIVES
