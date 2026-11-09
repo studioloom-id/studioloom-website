@@ -395,15 +395,20 @@ a.btn-outline {
 a.btn-outline:hover { background: var(--terracotta); border-color: var(--terracotta); }
 .statement-section .btn-row { margin-top: 2.2rem; }
 
-/* ============ CONSULT PAGE BLOCKS ============ */
-.text-split { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem 5rem; align-items: start; }
-.text-split .body-copy + .body-copy { margin-top: 1.2rem; }
+/* ============ CONSULT PAGE: all details in one column beside a portrait photo (same pattern as Contact) ============ */
+.consult-body { padding-top: 5rem; padding-bottom: 5rem; }
+.consult-block + .consult-block { margin-top: 3.2rem; }
+.block-title { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.7rem, 2.4vw, 2.2rem); line-height: 1.15; color: var(--umber); letter-spacing: -0.01em; margin-bottom: 1.1rem; }
+.block-title em { font-style: italic; color: var(--terracotta); }
+.consult-body .spec-list { margin-top: 0; }
+.consult-body .body-copy + .body-copy { margin-top: 0.9rem; }
 .text-link { color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; }
-.receive-list { list-style: none; margin: 3rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
-.receive-list li { padding-top: 1.2rem; border-top: 1px solid rgba(33,26,20,0.18); font-family: var(--font-display); font-weight: 300; font-size: 1.3rem; line-height: 1.4; color: var(--umber); }
-.steps { list-style: none; margin: 3rem 0 0; padding: 0; counter-reset: step; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.5rem; }
-.steps li { counter-increment: step; padding-top: 1.2rem; border-top: 1px solid rgba(250,247,242,0.18); font-family: var(--font-display); font-weight: 300; font-size: 1.2rem; line-height: 1.4; color: var(--bone); }
-.steps li::before { content: counter(step); display: block; font-size: 2rem; font-weight: 300; line-height: 1; color: var(--terracotta); margin-bottom: 1rem; }
+.step-list { list-style: none; margin: 0; padding: 0; counter-reset: step; max-width: 620px; }
+.step-list li { counter-increment: step; position: relative; padding: 0.9rem 0 0.9rem 2.8rem; border-top: 1px solid rgba(33,26,20,0.12); font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); line-height: 1.7; color: var(--espresso); }
+.step-list li:last-child { border-bottom: 1px solid rgba(33,26,20,0.12); }
+.step-list li::before { content: counter(step); position: absolute; left: 0; top: 0.75rem; font-family: var(--font-display); font-size: 1.4rem; line-height: 1.2; color: var(--terracotta); }
+/* Photo stays in view while the longer text column scrolls */
+.split-img-inset.sticky picture { position: sticky; top: 7rem; }
 
 /* ============ PROJECT PAGE (editorial layout): text beside a lead image, then a rhythm of full / paired / offset photos ============ */
 .pj-intro { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 3rem 5rem; align-items: center; padding: 8rem var(--pad-h) 2rem; }
@@ -568,9 +573,7 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
   .included-row { grid-template-columns: 1fr; }
-  .text-split { grid-template-columns: 1fr; }
-  .receive-list { grid-template-columns: 1fr 1fr; }
-  .steps { grid-template-columns: 1fr 1fr; }
+  .split-img-inset.sticky picture { position: static; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .pg-item.wide { grid-column: span 2; }
   .pj-intro { grid-template-columns: 1fr; padding: 8rem 2rem 2rem; }
@@ -587,7 +590,6 @@ a.footer-contact-value:hover { color: var(--terracotta); }
 @media (max-width: 640px) {
   /* Phone width: let the nav button shrink so it doesn't cover the logo */
   .nav-cta { min-width: 0; padding: 0.65rem 1rem; }
-  .receive-list, .steps { grid-template-columns: 1fr; }
   .btn-row > a:not(:only-child) { min-width: 0; width: 100%; }
   .about-philosophy { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: 1fr; }

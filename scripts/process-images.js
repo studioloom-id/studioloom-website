@@ -78,7 +78,9 @@ async function main() {
 
     const derivatives = process.env.ONLY_PORTRAIT
       ? (entry.portrait ? PORTRAIT_DERIVATIVES : [])
-      : DERIVATIVES.concat(entry.portrait ? PORTRAIT_DERIVATIVES : []);
+      : entry.portraitOnly
+        ? PORTRAIT_DERIVATIVES
+        : DERIVATIVES.concat(entry.portrait ? PORTRAIT_DERIVATIVES : []);
     for (const [name, w, h, maxKB, formats] of derivatives) {
       // Many source renders carry a thin dark strip on their outer edges (6-24px on a 3000px
       // frame). Trim 1% from every side before resizing so it never shows as a black border.
