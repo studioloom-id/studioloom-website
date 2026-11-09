@@ -78,7 +78,13 @@ function renderNav(opts) {
 // ---------- FOOTER ----------
 function renderFooter(opts = {}) {
   const c = opts.cta || {};
-  const ctaButtons = (c.buttons || [{ label: 'Send a brief', href: '/contact', style: 'primary' }])
+  // Default footer buttons on every page with a CTA band: WhatsApp (number from nap.json) + Send a brief
+  const waDigits = String(nap.whatsapp).replace(/\D/g, '');
+  const defaultButtons = [
+    { label: 'Chat on WhatsApp', href: `https://wa.me/${waDigits}?text=${encodeURIComponent("Hi Studio Loom, I'd like to discuss a project.")}`, style: 'primary', external: true },
+    { label: 'Send a brief', href: '/contact', style: 'outline' },
+  ];
+  const ctaButtons = (c.buttons || defaultButtons)
     .map((b) => `<a class="${b.style === 'outline' ? 'btn-outline' : 'btn-primary'}" href="${esc(b.href)}"${b.external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(b.label)}</a>`)
     .join('\n    ');
   const cta = opts.noCta ? '' : `  <div class="footer-cta">
