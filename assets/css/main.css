@@ -163,6 +163,12 @@ img { max-width: 100%; }
 /* 3:2 photos: the banner is exactly the photo's own 3:2 shape at full width, so nothing is cropped and there are no side bands.
    Text sits bottom-left like every other banner. */
 .page-hero.hero-ratio-32 { width: 100%; aspect-ratio: 3 / 2; }
+/* The 3:2 banner can be taller than the screen, so the title block is anchored to the bottom of the first screen
+   (or the bottom of the banner, if that comes first) and never falls below the fold. */
+@media (min-width: 769px) {
+  /* bottom offset = how far the banner extends past the first screen (0 when it fits) */
+  .hero-ratio-32 .hero-content { position: absolute; left: 0; right: 0; bottom: max(0px, calc(100% - 100vh)); bottom: max(0px, calc(100% - 100svh)); }
+}
 @media (max-width: 768px) {
   /* Narrow screens: photo sits at its own ratio, title block follows below it */
   .page-hero.hero-full-frame { aspect-ratio: auto; flex-direction: column; align-items: stretch; background: var(--umber); }
