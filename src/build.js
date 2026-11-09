@@ -208,6 +208,12 @@ function serviceSchema(page, svc) {
   };
 }
 
+// FAQ answers may contain site links written as [text](/path). Visible markup renders them as <a>;
+// structured data (and the stored answer text) gets the plain words only.
+const FAQ_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+const faqPlain = (a) => a.replace(FAQ_LINK, '$1');
+const faqHtml = (a) => esc(a).replace(FAQ_LINK, '<a class="text-link" href="$2">$1</a>');
+
 function faqSchema(faq) {
   return {
     '@context': 'https://schema.org',
@@ -215,7 +221,7 @@ function faqSchema(faq) {
     mainEntity: faq.map((f) => ({
       '@type': 'Question',
       name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
+      acceptedAnswer: { '@type': 'Answer', text: faqPlain(f.a) },
     })),
   };
 }
@@ -230,7 +236,7 @@ function renderFaqSection(faq, image) {
     .map(
       (f, i) => `        <details class="faq-item"${i === 0 ? ' open' : ''}>
           <summary>${esc(f.q)}</summary>
-          <p class="faq-answer">${esc(f.a)}</p>
+          <p class="faq-answer">${faqHtml(f.a)}</p>
         </details>`
     )
     .join('\n');
