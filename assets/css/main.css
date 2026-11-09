@@ -161,13 +161,12 @@ img { max-width: 100%; }
 .page-hero.hero-full-frame { min-height: 0; aspect-ratio: 16 / 9; }
 .hero-full-frame .hero-bg img { object-fit: contain; }
 /* 3:2 photos: the banner is exactly the photo's own 3:2 shape at full width, so nothing is cropped and there are no side bands.
-   It is taller than a 16:9 banner, so the title sits mid-height to stay in the first screen. */
-.page-hero.hero-ratio-32 { width: 100%; aspect-ratio: 3 / 2; align-items: center; }
+   Text sits bottom-left like every other banner. */
+.page-hero.hero-ratio-32 { width: 100%; aspect-ratio: 3 / 2; }
 @media (max-width: 768px) {
   /* Narrow screens: photo sits at its own ratio, title block follows below it */
   .page-hero.hero-full-frame { aspect-ratio: auto; flex-direction: column; align-items: stretch; background: var(--umber); }
   .hero-full-frame .hero-bg { position: relative; inset: auto; aspect-ratio: 16 / 9; }
-  .page-hero.hero-ratio-32 { align-items: stretch; }
   .hero-ratio-32 .hero-bg { aspect-ratio: 3 / 2; }
   .hero-full-frame .hero-overlay { display: none; }
   .hero-full-frame .hero-content { padding-top: 2rem; }
