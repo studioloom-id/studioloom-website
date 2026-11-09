@@ -77,12 +77,18 @@ function renderNav(opts) {
 
 // ---------- FOOTER ----------
 function renderFooter(opts = {}) {
+  const c = opts.cta || {};
+  const ctaButtons = (c.buttons || [{ label: 'Send a brief', href: '/contact', style: 'primary' }])
+    .map((b) => `<a class="${b.style === 'outline' ? 'btn-outline' : 'btn-primary'}" href="${esc(b.href)}"${b.external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(b.label)}</a>`)
+    .join('\n    ');
   const cta = opts.noCta ? '' : `  <div class="footer-cta">
     <div class="footer-cta-text">
       <h2 class="footer-cta-title">Ready to <em>begin?</em></h2>
-      <p class="footer-cta-copy">Every project starts with a structured consultation. Based in Gurugram, working Pan India.</p>
+      <p class="footer-cta-copy">${esc(c.copy || 'Every project starts with a structured consultation. Based in Gurugram, working Pan India.')}</p>
     </div>
-    <a class="btn-primary" href="/contact">Send a brief</a>
+    <div class="btn-row">
+    ${ctaButtons}
+    </div>
   </div>
 `;
   return `<footer>
@@ -351,7 +357,7 @@ function buildPage(meta, body) {
     .replace(/{{EXTRA_HEAD}}/g, meta.extraHead || '')
     .replace(/{{NAV}}/g, renderNav({ solid: !!meta.solidNav }))
     .replace(/{{BODY}}/g, fullBody)
-    .replace(/{{FOOTER}}/g, renderFooter({ noCta: ['/contact','/404','/privacy-policy'].includes(meta.url) }))
+    .replace(/{{FOOTER}}/g, renderFooter({ noCta: ['/contact','/404','/privacy-policy'].includes(meta.url), cta: meta.footerCta }))
     .replace(/{{EXTRA_SCRIPTS}}/g, meta.extraScripts || '');
 
   return versionAssets(html);

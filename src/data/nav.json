@@ -1,17 +1,39 @@
 {
   "primary": [
-    { "label": "Projects", "url": "/work" },
+    {
+      "label": "Projects",
+      "url": "/work"
+    },
     {
       "label": "Services",
       "url": "/services",
       "children": [
-        { "label": "Turnkey Interior Design", "url": "/services/turnkey-interior-design" },
-        { "label": "Design Consultation", "url": "/services/design-consultation" },
-        { "label": "Interior Styling", "url": "/services/interior-styling" }
+        {
+          "label": "Studio Loom Consult",
+          "url": "/services/studio-loom-consult"
+        },
+        {
+          "label": "Turnkey Interior Design",
+          "url": "/services/turnkey-interior-design"
+        },
+        {
+          "label": "Design Consultation",
+          "url": "/services/design-consultation"
+        },
+        {
+          "label": "Interior Styling",
+          "url": "/services/interior-styling"
+        }
       ]
     },
-    { "label": "Studio", "url": "/studio" },
-    { "label": "Journal", "url": "/journal" }
+    {
+      "label": "Studio",
+      "url": "/studio"
+    },
+    {
+      "label": "Journal",
+      "url": "/journal"
+    }
   ],
   "ctaLabel": "Get in Touch",
   "ctaUrl": "/contact",
@@ -19,20 +41,51 @@
     {
       "title": "Explore",
       "links": [
-        { "label": "Projects", "url": "/work" },
-        { "label": "Services", "url": "/services" },
-        { "label": "Studio", "url": "/studio" },
-        { "label": "Journal", "url": "/journal" },
-        { "label": "Contact", "url": "/contact" },
-        { "label": "Privacy Policy", "url": "/privacy-policy" }
+        {
+          "label": "Projects",
+          "url": "/work"
+        },
+        {
+          "label": "Services",
+          "url": "/services"
+        },
+        {
+          "label": "Studio",
+          "url": "/studio"
+        },
+        {
+          "label": "Journal",
+          "url": "/journal"
+        },
+        {
+          "label": "Contact",
+          "url": "/contact"
+        },
+        {
+          "label": "Privacy Policy",
+          "url": "/privacy-policy"
+        }
       ]
     },
     {
       "title": "Services",
       "links": [
-        { "label": "Turnkey Interior Design", "url": "/services/turnkey-interior-design" },
-        { "label": "Design Consultation", "url": "/services/design-consultation" },
-        { "label": "Interior Styling", "url": "/services/interior-styling" }
+        {
+          "label": "Studio Loom Consult",
+          "url": "/services/studio-loom-consult"
+        },
+        {
+          "label": "Turnkey Interior Design",
+          "url": "/services/turnkey-interior-design"
+        },
+        {
+          "label": "Design Consultation",
+          "url": "/services/design-consultation"
+        },
+        {
+          "label": "Interior Styling",
+          "url": "/services/interior-styling"
+        }
       ]
     }
   ]

@@ -6,6 +6,14 @@
   const status = document.getElementById('form-status');
   if (!form || !status) return;
 
+  // Deep link from a service page: /contact?service=Studio%20Loom%20Consult preselects that service type
+  const wanted = new URLSearchParams(window.location.search).get('service');
+  const select = form.querySelector('#service_type');
+  if (wanted && select) {
+    const match = Array.from(select.options).find((o) => o.value === wanted || o.textContent.trim() === wanted);
+    if (match) select.value = match.value;
+  }
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     status.className = 'form-status visible';
