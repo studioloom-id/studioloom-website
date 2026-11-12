@@ -82,7 +82,7 @@ function renderFooter(opts = {}) {
   // WhatsApp (number from nap.json, message pre-typed) + Send a brief (contact form, Consult preselected)
   const waDigits = String(nap.whatsapp).replace(/\D/g, '');
   const defaultButtons = [
-    { label: 'Book on WhatsApp', href: `https://wa.me/${waDigits}?text=${encodeURIComponent("Hi Studio Loom, I'd like to book a Studio Loom Consult.")}`, style: 'primary', external: true },
+    { label: 'Chat on WhatsApp', href: `https://wa.me/${waDigits}?text=${encodeURIComponent("Hi Studio Loom, I'd like to book a Studio Loom Consult.")}`, style: 'primary', external: true },
     { label: 'Send a brief', href: '/contact?service=Studio%20Loom%20Consult', style: 'outline' },
   ];
   const ctaButtons = (c.buttons || defaultButtons)
