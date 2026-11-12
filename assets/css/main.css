@@ -202,7 +202,7 @@ img { max-width: 100%; }
 }
 .btn-primary:hover { background: #a0503a; }
 /* Nav "Get in touch" and the link-style "Send a brief" button share one box: same padding, border, line-height, and min-width (font size untouched) */
-.nav-cta, a.btn-primary {
+.nav-cta, a.btn-primary, button.btn-primary {
   display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box;
   min-width: 11.5rem; padding: 0.75rem 1.6rem; line-height: 1.2; border: 1px solid var(--terracotta); text-align: center;
 }
@@ -479,6 +479,8 @@ a.btn-outline:hover { background: var(--terracotta); border-color: var(--terraco
 }
 .enquiry-form input:focus, .enquiry-form select:focus, .enquiry-form textarea:focus { border-color: var(--terracotta); }
 .enquiry-form textarea { resize: vertical; min-height: 90px; }
+.enquiry-form .btn-primary { justify-self: start; cursor: pointer; }  /* same box as 'Get in touch', left-aligned with the fields */
+.enquiry-form .btn-primary:disabled { opacity: 0.6; cursor: default; }
 .form-success { display: none; margin-top: 0.5rem; outline: none; }
 .form-success .body-copy { margin-top: 1rem; }
 /* After a successful send: the heading and form give way to the confirmation */
@@ -595,7 +597,7 @@ a.footer-contact-value:hover { color: var(--terracotta); }
 @media (max-width: 640px) {
   /* Phone width: let the nav button shrink so it doesn't cover the logo */
   .nav-cta { min-width: 0; padding: 0.65rem 1rem; }
-  .btn-row > a { min-width: 0; padding: 0.65rem 1rem; }  /* same height and padding as the phone nav button */
+  .btn-row > a, .enquiry-form .btn-primary { min-width: 0; padding: 0.65rem 1rem; }  /* same height and padding as the phone nav button */
   .about-philosophy { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
