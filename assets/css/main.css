@@ -599,7 +599,7 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .nav-cta { min-width: 0; padding: 0.65rem 1rem; }
   .btn-row > a, .enquiry-form .btn-primary { min-width: 0; padding: 0.65rem 1rem; }  /* same height and padding as the phone nav button */
   .about-philosophy { grid-template-columns: 1fr; }
-  .cards-grid { grid-template-columns: 1fr; }
+  .cards-grid, .cards-grid.cols-2 { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .pg-item.wide { grid-column: span 1; }
