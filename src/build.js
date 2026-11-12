@@ -78,11 +78,12 @@ function renderNav(opts) {
 // ---------- FOOTER ----------
 function renderFooter(opts = {}) {
   const c = opts.cta || {};
-  // Default footer buttons on every page with a CTA band: WhatsApp (number from nap.json) + Send a brief
+  // Footer CTA band, identical on every page (it is the Studio Loom Consult call to action):
+  // WhatsApp (number from nap.json, message pre-typed) + Send a brief (contact form, Consult preselected)
   const waDigits = String(nap.whatsapp).replace(/\D/g, '');
   const defaultButtons = [
-    { label: 'Chat on WhatsApp', href: `https://wa.me/${waDigits}?text=${encodeURIComponent("Hi Studio Loom, I'd like to discuss a project.")}`, style: 'primary', external: true },
-    { label: 'Send a brief', href: '/contact', style: 'outline' },
+    { label: 'Book on WhatsApp', href: `https://wa.me/${waDigits}?text=${encodeURIComponent("Hi Studio Loom, I'd like to book a Studio Loom Consult.")}`, style: 'primary', external: true },
+    { label: 'Send a brief', href: '/contact?service=Studio%20Loom%20Consult', style: 'outline' },
   ];
   const ctaButtons = (c.buttons || defaultButtons)
     .map((b) => `<a class="${b.style === 'outline' ? 'btn-outline' : 'btn-primary'}" href="${esc(b.href)}"${b.external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(b.label)}</a>`)
@@ -90,7 +91,7 @@ function renderFooter(opts = {}) {
   const cta = opts.noCta ? '' : `  <div class="footer-cta">
     <div class="footer-cta-text">
       <h2 class="footer-cta-title">Ready to <em>begin?</em></h2>
-      <p class="footer-cta-copy">${esc(c.copy || 'Every project starts with a structured consultation. Based in Gurugram, working Pan India.')}</p>
+      <p class="footer-cta-copy">${esc(c.copy || 'Every project starts with a Studio Loom Consult. Based in Gurugram, working Pan India.')}</p>
     </div>
     <div class="btn-row">
     ${ctaButtons}
@@ -369,7 +370,7 @@ function buildPage(meta, body) {
     .replace(/{{EXTRA_HEAD}}/g, meta.extraHead || '')
     .replace(/{{NAV}}/g, renderNav({ solid: !!meta.solidNav }))
     .replace(/{{BODY}}/g, fullBody)
-    .replace(/{{FOOTER}}/g, renderFooter({ noCta: ['/contact','/404','/privacy-policy'].includes(meta.url), cta: meta.footerCta }))
+    .replace(/{{FOOTER}}/g, renderFooter({ cta: meta.footerCta }))
     .replace(/{{EXTRA_SCRIPTS}}/g, meta.extraScripts || '');
 
   return versionAssets(html);
