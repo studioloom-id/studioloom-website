@@ -310,7 +310,7 @@ section { padding: var(--pad-v) var(--pad-h); }
 .service-card:hover { background: var(--sand); }
 .service-name { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 1rem; }
 .service-desc { font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); line-height: 1.8; color: var(--espresso); }
-.service-card .learn-more { display: inline-block; margin-top: 1.6rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); transition: color 0.2s; }
+.service-card .learn-more, .strip-link { display: inline-block; margin-top: 1.6rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); transition: color 0.2s; }
 .service-card:hover .learn-more { color: #a0503a; }
 /* Equal-height cards with the Learn more link pinned to the same baseline */
 .cards-grid > a.service-card { display: flex; flex-direction: column; align-items: flex-start; }
@@ -393,6 +393,15 @@ span.project-name { color: var(--espresso); }
 .included-sub { font-family: var(--font-body); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracotta); margin: 4.5rem 0 1.6rem; }
 .suited-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 .suited-list li { padding-top: 1.2rem; border-top: 1px solid rgba(250,247,242,0.18); font-family: var(--font-display); font-weight: 300; font-size: 1.2rem; line-height: 1.4; color: var(--bone); }
+
+/* ============ CONSULT STRIP (Services page): a slim tinted band, deliberately not a card ============ */
+.consult-strip { padding: 3.5rem var(--pad-h); background: rgba(33,26,20,0.04); }
+.consult-strip-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1.5rem 5rem; align-items: start; }
+.consult-strip .section-label { margin-bottom: 0.8rem; }
+.consult-strip .block-title { margin-bottom: 0; }
+.consult-strip .body-copy { max-width: 560px; }
+.strip-link { display: inline-block; margin-top: 1.4rem; text-decoration: none; }
+.strip-link:hover { color: #a0503a; }
 
 /* ============ BUTTON ROW + OUTLINE BUTTON (Studio Loom Consult page and its footer CTA) ============ */
 .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -580,6 +589,8 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
   .included-row { grid-template-columns: 1fr; }
+  .consult-strip { padding: 2.5rem 2rem; }
+  .consult-strip-inner { grid-template-columns: 1fr; gap: 1rem; }
   .split-img-inset.sticky picture { position: static; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .pg-item.wide { grid-column: span 2; }
