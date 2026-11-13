@@ -100,5 +100,13 @@
   </div>
 </main>
 
+<script>
+  // Google Analytics: phone_click when the phone number is tapped (this page doesn't load the site script)
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (link && window.gtag) window.gtag('event', 'phone_click');
+  });
+</script>
+
 </body>
 </html>

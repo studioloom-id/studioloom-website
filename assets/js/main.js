@@ -75,4 +75,10 @@
     prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
     next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
   });
+
+  // Google Analytics: any tap/click on a phone link (footer, privacy page, anywhere a tel: link exists)
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (link && window.gtag) window.gtag('event', 'phone_click');
+  });
 })();
