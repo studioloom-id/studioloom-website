@@ -1,6 +1,10 @@
 // Studio Loom — enquiry form submission handler.
 // The form's `action` (contact page) is the Formspree endpoint; this sends an AJAX POST with
-// an Accept: application/json header so the page stays put and shows a status message.
+// an Accept: application/json header (Formspree's AJAX method) so visitors never leave our site.
+// Success: the form is replaced by a thank-you with a WhatsApp button, and GA gets `form_submit`.
+// Failure: the form and everything typed stay in place, with a short try-again message.
+const WHATSAPP_URL = "https://wa.me/918800110317?text=Hi%20Studio%20Loom%2C%20I'd%20like%20to%20book%20a%20Studio%20Loom%20Consult.";
+
 (function () {
   const form = document.getElementById('enquiry-form');
   const status = document.getElementById('form-status');
@@ -42,16 +46,19 @@
           success.focus({ preventScroll: true });
         } else {
           status.className = 'form-status visible success';
-          status.textContent = "Thank you — we've received your enquiry and will be in touch shortly.";
+          status.textContent = "Thank you. We've received your details. We'll be in touch on WhatsApp soon.";
         }
-        if (window.gtag) window.gtag('event', 'generate_lead');
+        if (window.gtag) {
+          window.gtag('event', 'form_submit');
+          window.gtag('event', 'generate_lead'); // kept from before, in case a conversion is tied to it
+        }
       } else {
         throw new Error('Form submission failed');
       }
     } catch (err) {
       status.className = 'form-status visible error';
       status.innerHTML =
-        'Something went wrong sending the form. Please email us directly at <a href="mailto:projects@studioloom.co.in" style="color:inherit;">projects@studioloom.co.in</a> or call <a href="tel:+918800110317" style="color:inherit;">+91 8800 110 317</a>.';
+        'Something went wrong. Please try again, or message us on <a href="' + WHATSAPP_URL + '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">WhatsApp</a>.';
     } finally {
       submitBtn.disabled = false;
     }
