@@ -492,6 +492,7 @@ a.btn-outline:hover { background: var(--terracotta); border-color: var(--terraco
 .enquiry-form .btn-primary:disabled { opacity: 0.6; cursor: default; }
 .form-success { display: none; margin-top: 0.5rem; outline: none; }
 .form-success .body-copy { margin-top: 1rem; }
+.form-success .btn-primary { margin-top: 1.8rem; padding-left: 1rem; padding-right: 1rem; }  /* clear gap between the message and the WhatsApp button */
 /* After a successful send: the heading and form give way to the confirmation */
 #contact.is-sent .split-text > .section-label,
 #contact.is-sent .split-text > .section-title,
