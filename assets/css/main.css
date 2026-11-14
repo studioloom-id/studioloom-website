@@ -171,11 +171,8 @@ img { max-width: 100%; }
 .why-grid .block-title { font-weight: 400; font-size: 1.5rem; line-height: 1.2; letter-spacing: 0; margin-bottom: 1rem; }  /* same as .service-name / .process-title */
 .why-home .strip-link { margin-top: 3rem; }
 #why-studio-loom { scroll-margin-top: 5rem; }
-.why-studio { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem 6rem; align-items: start; }
-.why-studio-intro { position: sticky; top: 7rem; }
-.why-studio-intro .body-copy { margin-top: 1.4rem; max-width: 420px; }
-.why-studio-list .consult-block + .consult-block { margin-top: 2.8rem; }
-.why-studio-list .body-copy { max-width: 560px; }
+.why-points { display: grid; gap: 1.7rem; margin-top: 2.4rem; }
+.why-point-title { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 0.4rem; }  /* same as .service-name */
 
 /* CTA buttons: full pill shape (gallery arrows are already round) */
 .nav-cta, .btn-primary, .btn-outline, a.btn-outline { border-radius: 999px; }
@@ -604,8 +601,6 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .why-grid { grid-template-columns: 1fr 1fr; }
-  .why-studio { grid-template-columns: 1fr; gap: 2rem; }
-  .why-studio-intro { position: static; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
   .included-row { grid-template-columns: 1fr; }
   .consult-strip { padding: 2.5rem 2rem; }
