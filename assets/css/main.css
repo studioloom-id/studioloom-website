@@ -168,7 +168,7 @@ img { max-width: 100%; }
 /* Why Work With Studio Loom: home (four short points) and studio (five principles) */
 .why-home .why-head { max-width: 700px; margin-bottom: 3rem; }
 .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem 3rem; }
-.why-grid .block-title { font-size: clamp(1.35rem, 1.7vw, 1.6rem); margin-bottom: 0.8rem; }
+.why-grid .block-title { font-weight: 400; font-size: 1.5rem; line-height: 1.2; letter-spacing: 0; margin-bottom: 1rem; }  /* same as .service-name / .process-title */
 .why-home .strip-link { margin-top: 3rem; }
 #why-studio-loom { scroll-margin-top: 5rem; }
 .why-studio { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem 6rem; align-items: start; }
