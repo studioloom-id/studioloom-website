@@ -166,17 +166,14 @@ img { max-width: 100%; }
 /* The 3:2 banner can be taller than the screen, so the title block is anchored to the bottom of the first screen
    (or the bottom of the banner, if that comes first) and never falls below the fold. */
 /* Why Work With Studio Loom: home (four short points) and studio (five principles) */
-.why-band-lead { margin-top: 1.4rem; max-width: 520px; }  /* uses the standard .body-copy type */
-.why-band-list { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem 3rem; margin-top: 3rem; padding: 0; }
-.why-band-list li { display: flex; align-items: center; gap: 0.9rem; font-family: var(--font-body); font-weight: 400; font-size: var(--text-body); line-height: 1.4; color: var(--umber); }  /* sans-serif body type, same size as paragraphs */
-.why-band .why-icon { flex: none; width: 30px; height: 30px; margin: 0; stroke: var(--terracotta); }
-.why-band .strip-link { margin-top: 3rem; }
 #why-studio-loom { scroll-margin-top: 5rem; }
 /* Our Journey With Your Space: slim 3:1 photo band, statement left-aligned over the photo */
 .journey { position: relative; padding: 0; background: var(--umber); }
 .journey picture, .journey img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; }
 .journey::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(33,26,20,0.78) 0%, rgba(33,26,20,0.5) 35%, rgba(33,26,20,0) 65%); pointer-events: none; }
 .journey-text { position: absolute; z-index: 1; left: var(--pad-h); top: 50%; transform: translateY(-50%); max-width: 460px; }
+.why-photo .journey-text { max-width: 520px; }
+.why-photo .journey-text .body-copy { margin: 1.2rem 0 1.8rem; }
 .journey-statement { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.3rem, 1.9vw, 1.9rem); line-height: 1.35; color: var(--bone); letter-spacing: -0.01em; text-wrap: balance; }
 
 .why-points { display: grid; gap: 1.7rem; margin-top: 2.4rem; }
@@ -612,7 +609,6 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .split-img-inset { padding: 0; min-height: 60vw; }
   .cards-grid, .cards-grid.cols-4 { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
-  .why-band-list { grid-template-columns: 1fr 1fr; }
   .journey::after { display: none; }
   .journey-text { position: static; transform: none; max-width: none; padding: 2rem; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
@@ -640,7 +636,6 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .about-philosophy { grid-template-columns: 1fr; }
   .cards-grid, .cards-grid.cols-2, .cards-grid.cols-4 { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
-  .why-band-list { grid-template-columns: 1fr; gap: 1.4rem; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .pg-item.wide { grid-column: span 1; }
   .gallery-track picture { width: 82vw; }

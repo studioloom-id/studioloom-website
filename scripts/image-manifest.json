@@ -125,7 +125,8 @@
     "source": "Solanki Dining Room.png",
     "slug": "solanki-residence-dining-room-brass-pendant-gurugram-02",
     "alt": "Dining room with a walnut table, brass pendant lights, and olive cabinetry, Studio Loom, Gurugram",
-    "gravity": "center"
+    "gravity": "center",
+    "wide": true
   },
   {
     "source": "Solanki Guest Bedroom.png",
