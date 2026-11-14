@@ -172,7 +172,8 @@ img { max-width: 100%; }
 .journey picture, .journey img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; }
 .journey::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(33,26,20,0.78) 0%, rgba(33,26,20,0.5) 35%, rgba(33,26,20,0) 65%); pointer-events: none; }
 .journey-text { position: absolute; z-index: 1; left: var(--pad-h); top: 50%; transform: translateY(-50%); max-width: 460px; }
-.why-photo .journey-text { max-width: 620px; left: 3.5rem; }
+.why-wrap { padding-left: 0; padding-right: 0; }  /* space above and below only; the photo runs edge to edge */
+.why-photo .journey-text { max-width: 620px; }
 .why-photo::after { background: linear-gradient(90deg, rgba(33,26,20,0.9) 0%, rgba(33,26,20,0.8) 45%, rgba(33,26,20,0.3) 75%, rgba(33,26,20,0) 100%); }
 .why-photo .section-title { white-space: nowrap; }
 .why-photo .body-copy { color: var(--bone); }
