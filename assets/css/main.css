@@ -177,7 +177,7 @@ img { max-width: 100%; }
 .journey-img-left { align-self: end; }
 .journey-img-right { align-self: start; }
 .journey-text { text-align: center; }
-.journey-statement { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.8rem, 2.8vw, 2.8rem); line-height: 1.2; color: var(--umber); letter-spacing: -0.01em; text-wrap: balance; }
+.journey-statement { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.3rem, 1.7vw, 1.7rem); line-height: 1.35; color: var(--umber); letter-spacing: -0.01em; text-wrap: balance; }
 
 .why-points { display: grid; gap: 1.7rem; margin-top: 2.4rem; }
 .why-point-title { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 0.4rem; }  /* same as .service-name */
