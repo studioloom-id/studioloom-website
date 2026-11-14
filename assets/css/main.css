@@ -324,15 +324,15 @@ section { padding: var(--pad-v) var(--pad-h); }
 
 /* ============ SERVICE / CARD GRIDS ============ */
 .services-header { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3.5rem; max-width: 700px; }
-.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(33,26,20,0.12); border-left: 1px solid rgba(33,26,20,0.12); }
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5rem 4rem; }  /* no box lines: space separates the cards */
 .cards-grid.cols-2 { grid-template-columns: 1fr 1fr; }
-.cards-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
-.service-card.static:hover { background: none; }  /* not a link, so no hover tint */
+.cards-grid.cols-4 { grid-template-columns: repeat(4, 1fr); gap: 3rem; }
 .service-card {
-  padding: 3rem 2.5rem; border-right: 1px solid rgba(33,26,20,0.12); border-bottom: 1px solid rgba(33,26,20,0.12);
-  transition: background 0.3s; text-decoration: none; color: inherit; display: block;
+  padding: 0;
+  text-decoration: none; color: inherit; display: block;
 }
-.service-card:hover { background: var(--sand); }
+.service-name { transition: color 0.25s; }
+a.service-card:hover .service-name { color: var(--terracotta); }
 .service-name { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 1rem; }
 .service-desc { font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); line-height: 1.8; color: var(--espresso); }
 .service-card .learn-more, .strip-link { display: inline-block; margin-top: 1.6rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); transition: color 0.2s; }
@@ -398,13 +398,6 @@ span.project-name { color: var(--espresso); }
 .lead-copy + .lead-copy { margin-top: 1.6rem; }
 .lead-copy em { font-style: italic; color: var(--bone); }
 
-/* ============ PROCESS CARDS (full-width numbered grid — service page "how it works") ============ */
-.process-cards {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  border-top: 1px solid rgba(250,247,242,0.12); border-left: 1px solid rgba(250,247,242,0.12); margin-top: 3rem;
-}
-.process-card { padding: 3rem 2.5rem; border-right: 1px solid rgba(250,247,242,0.12); border-bottom: 1px solid rgba(250,247,242,0.12); }
-.process-card-desc { font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); line-height: 1.8; color: rgba(250,247,242,0.65); }
 
 /* ============ INCLUDED (service pages): a quiet vertical sequence under the heading ============ */
 .included-head { margin-bottom: 3.5rem; max-width: 900px; }
