@@ -179,6 +179,8 @@ img { max-width: 100%; }
 .journey-statement { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.3rem, 1.9vw, 1.9rem); line-height: 1.35; color: var(--bone); letter-spacing: -0.01em; text-wrap: balance; }
 
 .why-points { display: grid; gap: 1.7rem; margin-top: 2.4rem; }
+.why-point { display: grid; grid-template-columns: 2.6rem 1fr; align-items: start; }
+.why-icon { width: 28px; height: 28px; margin-top: 0.1rem; fill: none; stroke: var(--terracotta); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }  /* thin line, terracotta, like the logo's linework */
 .why-point-title { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 0.4rem; }  /* same as .service-name */
 
 /* CTA buttons: full pill shape (gallery arrows are already round) */
