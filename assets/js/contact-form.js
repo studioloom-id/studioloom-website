@@ -58,7 +58,7 @@ const WHATSAPP_URL = "https://wa.me/918800110317?text=Hi%20Studio%20Loom%2C%20I'
     } catch (err) {
       status.className = 'form-status visible error';
       status.innerHTML =
-        'Something went wrong. Please try again, or message us on <a href="' + WHATSAPP_URL + '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">WhatsApp</a>.';
+        'Please try sending again, or message us on <a href="' + WHATSAPP_URL + '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">WhatsApp</a>.';
     } finally {
       submitBtn.disabled = false;
     }
