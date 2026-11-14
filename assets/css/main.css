@@ -171,13 +171,12 @@ img { max-width: 100%; }
 .why-grid .block-title { font-weight: 400; font-size: 1.5rem; line-height: 1.2; letter-spacing: 0; margin-bottom: 1rem; }  /* same as .service-name / .process-title */
 .why-home .strip-link { margin-top: 3rem; }
 #why-studio-loom { scroll-margin-top: 5rem; }
-/* Our Journey With Your Space: tinted band, statement between two project photos (photos never cropped) */
-.journey { background: rgba(33,26,20,0.05); display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 3rem; align-items: center; padding: 5rem var(--pad-h); }
-.journey-img picture, .journey-img img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; }
-.journey-img-left { align-self: end; }
-.journey-img-right { align-self: start; }
-.journey-text { text-align: center; }
-.journey-statement { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.3rem, 1.7vw, 1.7rem); line-height: 1.35; color: var(--umber); letter-spacing: -0.01em; text-wrap: balance; }
+/* Our Journey With Your Space: slim 3:1 photo band, statement left-aligned over the photo */
+.journey { position: relative; padding: 0; background: var(--umber); }
+.journey picture, .journey img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; }
+.journey::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(33,26,20,0.78) 0%, rgba(33,26,20,0.5) 35%, rgba(33,26,20,0) 65%); pointer-events: none; }
+.journey-text { position: absolute; z-index: 1; left: var(--pad-h); top: 50%; transform: translateY(-50%); max-width: 460px; }
+.journey-statement { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.3rem, 1.9vw, 1.9rem); line-height: 1.35; color: var(--bone); letter-spacing: -0.01em; text-wrap: balance; }
 
 .why-points { display: grid; gap: 1.7rem; margin-top: 2.4rem; }
 .why-point-title { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 0.4rem; }  /* same as .service-name */
@@ -609,9 +608,8 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .why-grid { grid-template-columns: 1fr 1fr; }
-  .journey { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 2rem; }
-  .journey-text { grid-column: 1 / -1; grid-row: 1; }
-  .journey-img-left, .journey-img-right { align-self: start; }
+  .journey::after { display: none; }
+  .journey-text { position: static; transform: none; max-width: none; padding: 2rem; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
   .included-row { grid-template-columns: 1fr; }
   .consult-strip { padding: 2.5rem 2rem; }

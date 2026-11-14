@@ -167,7 +167,8 @@
     "source": "The Umber Office 01.png",
     "slug": "umber-office-reception-gurugram-01",
     "alt": "Reception lobby with a travertine console, sculptural pendant lights, and leather lounge chairs, Studio Loom, Gurugram",
-    "gravity": "center"
+    "gravity": "center",
+    "wide": true
   },
   {
     "source": "The Umber Office 02.png",

@@ -39,6 +39,11 @@ const BANNER_DERIVATIVES = [
   ['banner', 2160, 1440, 260, ALL],
   ['banner-sm', 1080, 720, 130, ALL],
 ];
+// Opt-in 3:1 wide tier (manifest entry needs "wide": true) — a deliberate crop for slim text-over-photo bands.
+const WIDE_DERIVATIVES = [
+  ['wide', 2400, 800, 220, ALL],
+  ['wide-sm', 1200, 400, 90, ALL],
+];
 const PORTRAIT_DERIVATIVES = [
   ['portrait', 960, 1200, 150, ALL],
   ['portrait-sm', 480, 600, 60, ALL],
@@ -82,7 +87,9 @@ async function main() {
     }
     const srcMeta = await sharp(srcPath).metadata();
 
-    const derivatives = process.env.ONLY_BANNER
+    const derivatives = process.env.ONLY_WIDE
+      ? (entry.wide ? WIDE_DERIVATIVES : [])
+      : process.env.ONLY_BANNER
       ? (entry.banner ? BANNER_DERIVATIVES : [])
       : process.env.ONLY_PORTRAIT
       ? (entry.portrait ? PORTRAIT_DERIVATIVES : [])
