@@ -171,6 +171,14 @@ img { max-width: 100%; }
 .why-grid .block-title { font-weight: 400; font-size: 1.5rem; line-height: 1.2; letter-spacing: 0; margin-bottom: 1rem; }  /* same as .service-name / .process-title */
 .why-home .strip-link { margin-top: 3rem; }
 #why-studio-loom { scroll-margin-top: 5rem; }
+/* Our Journey With Your Space: tinted band, statement between two project photos (photos never cropped) */
+.journey { background: rgba(33,26,20,0.05); display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 3rem; align-items: center; padding: 5rem var(--pad-h); }
+.journey-img picture, .journey-img img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; }
+.journey-img-left { align-self: end; }
+.journey-img-right { align-self: start; }
+.journey-text { text-align: center; }
+.journey-statement { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.8rem, 2.8vw, 2.8rem); line-height: 1.2; color: var(--umber); letter-spacing: -0.01em; text-wrap: balance; }
+
 .why-points { display: grid; gap: 1.7rem; margin-top: 2.4rem; }
 .why-point-title { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); margin-bottom: 0.4rem; }  /* same as .service-name */
 
@@ -601,6 +609,9 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .why-grid { grid-template-columns: 1fr 1fr; }
+  .journey { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 2rem; }
+  .journey-text { grid-column: 1 / -1; grid-row: 1; }
+  .journey-img-left, .journey-img-right { align-self: start; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
   .included-row { grid-template-columns: 1fr; }
   .consult-strip { padding: 2.5rem 2rem; }
