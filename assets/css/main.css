@@ -177,6 +177,9 @@ img { max-width: 100%; }
 .why-studio-list .consult-block + .consult-block { margin-top: 2.8rem; }
 .why-studio-list .body-copy { max-width: 560px; }
 
+/* CTA buttons: full pill shape (gallery arrows are already round) */
+.nav-cta, .btn-primary, .btn-outline, a.btn-outline { border-radius: 999px; }
+
 @media (min-width: 769px) {
   /* bottom offset = how far the banner extends past the first screen (0 when it fits) */
   .hero-ratio-32 .hero-content { position: absolute; left: 0; right: 0; bottom: max(0px, calc(100% - 100vh)); bottom: max(0px, calc(100% - 100svh)); }
