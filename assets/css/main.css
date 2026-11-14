@@ -342,6 +342,19 @@ a.service-card:hover .service-name { color: var(--terracotta); }
 .cards-grid > a.service-card .learn-more { margin-top: auto; }
 .cards-grid > a.service-card .service-desc { margin-bottom: 1.6rem; }
 
+/* Home "How We Work": photo with an offset tint behind it, white cards overlapping its lower edge */
+.svc-showcase { position: relative; padding-bottom: 3.5rem; }
+.svc-backdrop { position: absolute; top: -2.5rem; right: 0; bottom: 0; width: 55%; background: var(--sand); }
+.svc-photo { position: relative; display: block; width: 88%; }
+.svc-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; }
+.svc-cards { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: -15rem 2.5rem 0; }
+a.svc-card { display: flex; flex-direction: column; align-items: flex-start; background: #fff; padding: 2rem 1.6rem 1.8rem; color: inherit; text-decoration: none; box-shadow: 0 12px 32px rgba(33,26,20,0.1); }
+.svc-icon { width: 36px; height: 36px; margin-bottom: 1.2rem; fill: none; stroke: var(--terracotta); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+a.svc-card .service-desc { margin-bottom: 1.4rem; }
+a.svc-card .learn-more { margin-top: auto; padding-bottom: 2px; border-bottom: 1px solid var(--terracotta); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terracotta); transition: color 0.2s, border-color 0.2s; }
+a.svc-card:hover .service-name, a.svc-card:hover .learn-more { color: #a0503a; }
+a.svc-card:hover .learn-more { border-color: #a0503a; }
+
 /* ============ WORK / PORTFOLIO GRID ============ */
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
 .pg-item { overflow: hidden; position: relative; aspect-ratio: 4 / 3; text-decoration: none; display: block; }
@@ -608,6 +621,9 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .split-img { min-height: 60vw; }
   .split-img-inset { padding: 0; min-height: 60vw; }
   .cards-grid, .cards-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+  .svc-cards { grid-template-columns: 1fr 1fr; margin: -5rem 1.5rem 0; }
+  .svc-photo { width: 100%; }
+  .svc-backdrop { width: 70%; }
   .process-grid { grid-template-columns: 1fr; gap: 2.4rem; padding-top: 0; padding-left: 2.2rem; }
   .process-grid::before { top: 6px; bottom: 6px; left: 5px; right: auto; width: 1px; height: auto; }
   .process-step::before { top: 0.3rem; left: -2.2rem; }
@@ -639,6 +655,9 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .btn-row > a, .enquiry-form .btn-primary { min-width: 0; padding: 0.65rem 1rem; }  /* same height and padding as the phone nav button */
   .about-philosophy { grid-template-columns: 1fr; }
   .cards-grid, .cards-grid.cols-2, .cards-grid.cols-4 { grid-template-columns: 1fr; }
+  .svc-cards { grid-template-columns: 1fr; margin: -2.5rem 0 0; }
+  .svc-backdrop { display: none; }
+  .svc-showcase { padding-bottom: 0; }
   .process-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .pg-item.wide { grid-column: span 1; }
