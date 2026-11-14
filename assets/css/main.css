@@ -166,9 +166,9 @@ img { max-width: 100%; }
 /* The 3:2 banner can be taller than the screen, so the title block is anchored to the bottom of the first screen
    (or the bottom of the banner, if that comes first) and never falls below the fold. */
 /* Why Work With Studio Loom: home (four short points) and studio (five principles) */
-.why-band-lead { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.3rem, 1.7vw, 1.7rem); line-height: 1.35; color: var(--umber); max-width: 560px; margin-top: 1.2rem; }
+.why-band-lead { margin-top: 1.4rem; max-width: 520px; }  /* uses the standard .body-copy type */
 .why-band-list { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem 3rem; margin-top: 3rem; padding: 0; }
-.why-band-list li { display: flex; align-items: center; gap: 0.9rem; font-family: var(--font-display); font-weight: 400; font-size: 1.35rem; line-height: 1.2; color: var(--umber); }
+.why-band-list li { display: flex; align-items: center; gap: 0.9rem; font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--umber); }  /* same as .service-name */
 .why-band .why-icon { flex: none; width: 30px; height: 30px; margin: 0; stroke: var(--terracotta); }
 .why-band .strip-link { margin-top: 3rem; }
 #why-studio-loom { scroll-margin-top: 5rem; }
