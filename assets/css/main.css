@@ -372,8 +372,11 @@ a.project-name:hover { border-color: var(--terracotta); color: var(--terracotta)
 span.project-name { color: var(--espresso); }
 
 /* ============ PROCESS ============ */
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 3.5rem; border-top: 1px solid rgba(250,247,242,0.12); border-left: 1px solid rgba(250,247,242,0.12); }
-.process-step { padding: 3rem 2.5rem; border-right: 1px solid rgba(250,247,242,0.12); border-bottom: 1px solid rgba(250,247,242,0.12); }
+/* Our Process: a timeline (line with a dot per step), no boxes */
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 3rem; margin-top: 3.5rem; padding-top: 2.4rem; position: relative; }
+.process-grid::before { content: ''; position: absolute; top: 5px; left: 0; right: 0; height: 1px; background: rgba(250,247,242,0.25); }
+.process-step { position: relative; padding: 0; }
+.process-step::before { content: ''; position: absolute; top: -2.4rem; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--terracotta); }
 .process-name { font-family: var(--font-body); font-weight: 400; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.8rem; }
 .process-title { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; color: var(--bone); margin-bottom: 1rem; line-height: 1.2; }
 .process-desc { font-family: var(--font-body); font-weight: 300; font-size: var(--text-body); line-height: 1.8; color: rgba(250,247,242,0.65); }
@@ -612,7 +615,9 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .split-img { min-height: 60vw; }
   .split-img-inset { padding: 0; min-height: 60vw; }
   .cards-grid, .cards-grid.cols-4 { grid-template-columns: 1fr 1fr; }
-  .process-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: 1fr; gap: 2.4rem; padding-top: 0; padding-left: 2.2rem; }
+  .process-grid::before { top: 6px; bottom: 6px; left: 5px; right: auto; width: 1px; height: auto; }
+  .process-step::before { top: 0.3rem; left: -2.2rem; }
   .journey::after { display: none; }
   .journey-text { position: static; transform: none; max-width: none; padding: 2rem; }
   .why-photo .section-title { white-space: normal; }
