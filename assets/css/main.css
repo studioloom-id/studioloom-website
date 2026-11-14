@@ -165,6 +165,18 @@ img { max-width: 100%; }
 .page-hero.hero-ratio-32 { width: 100%; aspect-ratio: 3 / 2; }
 /* The 3:2 banner can be taller than the screen, so the title block is anchored to the bottom of the first screen
    (or the bottom of the banner, if that comes first) and never falls below the fold. */
+/* Why Work With Studio Loom: home (four short points) and studio (five principles) */
+.why-home .why-head { max-width: 700px; margin-bottom: 3rem; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem 3rem; }
+.why-grid .block-title { font-size: clamp(1.35rem, 1.7vw, 1.6rem); margin-bottom: 0.8rem; }
+.why-home .strip-link { margin-top: 3rem; }
+#why-studio-loom { scroll-margin-top: 5rem; }
+.why-studio { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem 6rem; align-items: start; }
+.why-studio-intro { position: sticky; top: 7rem; }
+.why-studio-intro .body-copy { margin-top: 1.4rem; max-width: 420px; }
+.why-studio-list .consult-block + .consult-block { margin-top: 2.8rem; }
+.why-studio-list .body-copy { max-width: 560px; }
+
 @media (min-width: 769px) {
   /* bottom offset = how far the banner extends past the first screen (0 when it fits) */
   .hero-ratio-32 .hero-content { position: absolute; left: 0; right: 0; bottom: max(0px, calc(100% - 100vh)); bottom: max(0px, calc(100% - 100svh)); }
@@ -588,6 +600,9 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .split-img-inset { padding: 0; min-height: 60vw; }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .why-studio { grid-template-columns: 1fr; gap: 2rem; }
+  .why-studio-intro { position: static; }
   .suited-list { grid-template-columns: 1fr; gap: 1.8rem; }
   .included-row { grid-template-columns: 1fr; }
   .consult-strip { padding: 2.5rem 2rem; }
@@ -613,6 +628,7 @@ a.footer-contact-value:hover { color: var(--terracotta); }
   .about-philosophy { grid-template-columns: 1fr; }
   .cards-grid, .cards-grid.cols-2 { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 2rem; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .pg-item.wide { grid-column: span 1; }
   .gallery-track picture { width: 82vw; }
